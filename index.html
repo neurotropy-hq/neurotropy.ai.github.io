@@ -8,18 +8,38 @@
 </head>
 <body>
 
-  <img src="logo.svg" alt="Neurotropy" class="logo" />
+  <main>
+    <img src="logo.svg" alt="Neurotropy" class="logo" />
 
-  <p class="description">
-    Most people start studying before their brain is ready — and waste hours getting nowhere. Neurotropy fixes this through neurofeedback. Like a warm-up before a workout, it gets your brain into the ideal state for learning before you begin.
-  </p>
+    <p class="description">
+      Most people start studying before their brain is ready — and waste hours getting nowhere. Neurotropy fixes this through neurofeedback. Like a warm-up before a workout, it gets your brain into the ideal state for learning before you begin.
+    </p>
 
-  <div class="banner">
-    <span class="banner-dot"></span>
-    Coming Soon
-  </div>
+    <div class="banner">
+      <span class="banner-dot"></span>
+      Coming Soon
+    </div>
+
+    <section class="waitlist" id="waitlist">
+      <h2>Ready for your<br>first Brain Workout?</h2>
+      <p class="waitlist-sub">Sign up and be one of the first learning athletes.</p>
+      <form class="waitlist-form" onsubmit="handleSubmit(event)">
+        <input type="email" placeholder="your@email.com" required />
+        <button type="submit">Join the waitlist</button>
+      </form>
+      <p class="confirm" id="confirm" style="display:none">&#10003; You're on the list. We'll be in touch!</p>
+    </section>
+  </main>
 
   <footer>© 2026 Neurotropy</footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      e.target.style.display = 'none';
+      document.getElementById('confirm').style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>

@@ -13,6 +13,7 @@
 
 html, body {
   height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -21,13 +22,19 @@ body {
   color: var(--text);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 40px 24px;
   background-image:
     radial-gradient(ellipse 700px 400px at 50% 30%, rgba(120,80,220,0.15), transparent 65%),
     radial-gradient(ellipse 400px 300px at 80% 80%, rgba(168,85,247,0.06), transparent 60%);
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
   text-align: center;
 }
 
@@ -82,9 +89,102 @@ body {
   animation: pulse 1.8s ease-in-out infinite;
 }
 
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 40px;
+  border: 0.5px solid var(--border-2);
+  color: var(--purple);
+  background: rgba(168,85,247,0.08);
+  margin-bottom: 17px;
+}
+
+.chip-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--purple);
+}
+
+.waitlist h2 {
+  font-size: clamp(13px, 2.1vw, 20px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color: var(--text-muted);
+  -webkit-text-fill-color: unset;
+}
+
+.waitlist-sub {
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-bottom: 26px;
+}
+
+.waitlist {
+  margin-top: 28px;
+  animation: fadeUp 0.7s ease 0.6s forwards;
+  opacity: 0;
+}
+
+.waitlist-form {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.waitlist-form input[type="email"] {
+  padding: 8px 13px;
+  border-radius: 40px;
+  border: 0.5px solid var(--border-2);
+  background: rgba(168,85,247,0.07);
+  color: var(--text);
+  font-size: 11px;
+  outline: none;
+  min-width: 154px;
+}
+
+.waitlist-form input[type="email"]::placeholder {
+  color: var(--text-hint);
+}
+
+.waitlist-form button {
+  padding: 8px 17px;
+  border-radius: 40px;
+  border: none;
+  background: var(--purple);
+  color: #fff;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.waitlist-form button:hover {
+  background: var(--purple-d);
+}
+
+.confirm {
+  color: var(--purple);
+  font-size: 10px;
+  margin-bottom: 6px;
+}
+
+.waitlist-hint {
+  font-size: 8px;
+  color: var(--text-hint);
+}
+
 footer {
-  position: fixed;
-  bottom: 24px;
+  flex-shrink: 0;
+  padding: 16px;
+  text-align: center;
   font-size: 11px;
   color: var(--text-hint);
   letter-spacing: 0.3px;
