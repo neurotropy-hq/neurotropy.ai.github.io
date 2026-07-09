@@ -305,29 +305,29 @@ main {
 .sparkle { animation: sparkleAnim 1.8s ease-in-out infinite; }
 
 @media (min-width: 768px) {
-  .logo { width: 220px; }
+  .logo { width: 240px; }
 
-  .description { font-size: clamp(14px, 1.4vw, 17px); max-width: 420px; }
+  .description { font-size: clamp(15px, 1.5vw, 18px); max-width: 460px; }
 
-  .carousel-section { margin-top: 40px; margin-bottom: 32px; }
+  .carousel-section { margin-top: 48px; margin-bottom: 40px; }
 
-  .slides-wrap { width: min(420px, 80vw); }
-  .slide-card { flex: 0 0 min(420px, 80vw); min-height: 340px; padding: 2rem 1.75rem; }
+  .slides-wrap { width: min(460px, 70vw); }
+  .slide-card { flex: 0 0 min(460px, 70vw); min-height: 400px; padding: 2.25rem 2rem; }
 
-  .slide-heading { font-size: 19px; }
-  .slide-body { font-size: 14px; }
+  .slide-heading { font-size: 22px; }
+  .slide-body { font-size: 16px; }
 
-  .eeg-wrap { gap: 14px; }
-  .eeg-band { font-size: 13px; }
-  .eeg-val { font-size: 13px; }
-  .eeg-bar-bg { height: 5px; }
+  .eeg-wrap { gap: 18px; }
+  .eeg-band { font-size: 15px; width: 52px; }
+  .eeg-val { font-size: 15px; width: 28px; }
+  .eeg-bar-bg { height: 6px; }
 
-  .ufo { font-size: 44px; }
-  .ufo-wrap { height: 160px; }
+  .ufo { font-size: 52px; }
+  .ufo-wrap { height: 180px; }
 
-  .waitlist { margin-top: 32px; }
-  .waitlist h2 { font-size: clamp(14px, 1.6vw, 18px); margin-bottom: 20px; }
-  .waitlist-form button { font-size: 12px; padding: 8px 18px; }
+  .waitlist { margin-top: 40px; }
+  .waitlist h2 { font-size: clamp(15px, 1.8vw, 20px); margin-bottom: 24px; }
+  .waitlist-form button { font-size: 14px; padding: 10px 22px; }
 }
 
 footer {
