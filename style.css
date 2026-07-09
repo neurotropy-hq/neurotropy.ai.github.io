@@ -49,19 +49,19 @@ main {
 }
 
 .logo {
-  width: 320px;
+  width: 160px;
   height: auto;
-  margin-top: 2cm;
-  margin-bottom: 40px;
+  margin-top: 1.2cm;
+  margin-bottom: 20px;
   animation: fadeUp 0.7s ease forwards;
 }
 
 .description {
-  font-size: clamp(18px, 2.5vw, 24px);
+  font-size: clamp(13px, 3.5vw, 16px);
   color: var(--text-muted);
-  max-width: 480px;
+  max-width: 340px;
   line-height: 1.7;
-  margin-bottom: 48px;
+  margin-bottom: 28px;
   animation: fadeUp 0.7s ease 0.2s forwards;
   opacity: 0;
 }
@@ -224,7 +224,7 @@ main {
 
 .slides-wrap {
   overflow: hidden;
-  width: min(520px, 90vw);
+  width: min(260px, 72vw);
 }
 
 .slides-inner {
@@ -233,15 +233,16 @@ main {
 }
 
 .slide-card {
-  flex: 0 0 min(520px, 90vw);
+  flex: 0 0 min(260px, 72vw);
   background: rgba(13,8,32,0.8);
   border: 0.5px solid rgba(168,85,247,0.2);
-  border-radius: 16px;
-  padding: 2.5rem 2rem;
+  border-radius: 14px;
+  padding: 1.25rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  min-height: 440px;
+  gap: 10px;
+  min-height: 280px;
+  overflow: hidden;
 }
 
 .slide-tag {
@@ -252,14 +253,14 @@ main {
 }
 
 .slide-heading {
-  font-size: 24px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text);
   line-height: 1.3;
 }
 
 .slide-body {
-  font-size: 19px;
+  font-size: 11px;
   color: var(--text-muted);
   line-height: 1.6;
 }
@@ -271,18 +272,18 @@ main {
   justify-content: center;
 }
 
-.eeg-wrap { width: 100%; display: flex; flex-direction: column; gap: 22px; }
-.eeg-row { display: flex; align-items: center; gap: 12px; }
-.eeg-band { font-size: 18px; color: var(--text-hint); width: 60px; text-align: right; font-family: monospace; }
+.eeg-wrap { width: 100%; display: flex; flex-direction: column; gap: 12px; }
+.eeg-row { display: flex; align-items: center; gap: 8px; }
+.eeg-band { font-size: 12px; color: var(--text-hint); width: 42px; text-align: right; font-family: monospace; }
 .eeg-muted { color: #6b5080 !important; }
-.eeg-bar-bg { flex: 1; height: 8px; background: rgba(255,255,255,0.05); border-radius: 4px; overflow: hidden; }
-.eeg-bar { height: 100%; border-radius: 4px; }
-.eeg-val { font-size: 18px; color: var(--purple); width: 34px; }
+.eeg-bar-bg { flex: 1; height: 5px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden; }
+.eeg-bar { height: 100%; border-radius: 3px; }
+.eeg-val { font-size: 12px; color: var(--purple); width: 24px; }
 .eeg-divider { margin-top: 8px; padding-top: 8px; border-top: 0.5px solid rgba(168,85,247,0.1); }
 
-.ufo-wrap { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 230px; position: relative; width: 100%; }
+.ufo-wrap { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100px; position: relative; width: 100%; }
 .ufo-track { position: absolute; left: 50%; top: 0; bottom: 20px; width: 1px; border-left: 1px dashed rgba(168,85,247,0.2); transform: translateX(-50%); }
-.ufo { font-size: 64px; animation: ufoFloat 3s ease-in-out infinite; position: relative; }
+.ufo { font-size: 28px; animation: ufoFloat 3s ease-in-out infinite; position: relative; }
 .ufo-label { font-size: 9px; color: var(--text-hint); margin-top: 6px; letter-spacing: 0.08em; }
 
 .carousel-dots { display: flex; gap: 6px; }
@@ -302,6 +303,32 @@ main {
 .pop { animation: pop-anim 2s ease-in-out infinite; }
 .book-glow { animation: bookGlowAnim 2.5s ease-in-out infinite; }
 .sparkle { animation: sparkleAnim 1.8s ease-in-out infinite; }
+
+@media (min-width: 768px) {
+  .logo { width: 220px; }
+
+  .description { font-size: clamp(14px, 1.4vw, 17px); max-width: 420px; }
+
+  .carousel-section { margin-top: 40px; margin-bottom: 32px; }
+
+  .slides-wrap { width: min(420px, 80vw); }
+  .slide-card { flex: 0 0 min(420px, 80vw); min-height: 340px; padding: 2rem 1.75rem; }
+
+  .slide-heading { font-size: 19px; }
+  .slide-body { font-size: 14px; }
+
+  .eeg-wrap { gap: 14px; }
+  .eeg-band { font-size: 13px; }
+  .eeg-val { font-size: 13px; }
+  .eeg-bar-bg { height: 5px; }
+
+  .ufo { font-size: 44px; }
+  .ufo-wrap { height: 160px; }
+
+  .waitlist { margin-top: 32px; }
+  .waitlist h2 { font-size: clamp(14px, 1.6vw, 18px); margin-bottom: 20px; }
+  .waitlist-form button { font-size: 12px; padding: 8px 18px; }
+}
 
 footer {
   flex-shrink: 0;
