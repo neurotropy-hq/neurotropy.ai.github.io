@@ -49,8 +49,9 @@ main {
 }
 
 .logo {
-  width: 180px;
+  width: 260px;
   height: auto;
+  margin-top: -60px;
   margin-bottom: 48px;
   animation: fadeUp 0.7s ease forwards;
 }
