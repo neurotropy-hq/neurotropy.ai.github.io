@@ -4,30 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neurotropy – Warm up your Brain</title>
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
 
   <main>
     <img src="logo.svg" alt="Neurotropy" class="logo" />
 
-    <p class="description">
-      Most people start studying before their brain is ready and waste hours getting nowhere. Neurotropy measures your brainwaves via EEG and uses neurofeedback to train your brain into a state of focused attention. Like a warm-up before a workout, but for your mind.
-    </p>
+    <div class="hero">
+      <div class="hero-text">
+        <p class="label">Neurofeedback for learners</p>
+        <h1 class="headline">Stop losing the first hour.<br>Get your brain focused before you study</h1>
+        <section class="waitlist" id="waitlist">
+          <form class="waitlist-form" onsubmit="handleSubmit(event)">
+            <input type="email" placeholder="your@email.com" required />
+            <button type="submit">Join the waitlist</button>
+          </form>
+          <p class="confirm" id="confirm" style="display:none">&#10003; You're on the list. We'll be in touch!</p>
+        </section>
+      </div>
 
-    <div class="banner">
-      <span class="banner-dot"></span>
-      Coming Soon
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1715866549135-e3bc3c6148a9?w=600&q=80"
+            alt="Person wearing EEG headset"
+            class="hero-photo"
+          />
+        </div>
+        <div class="card card-focus">
+          <div class="cf-label">Focus score</div>
+          <div class="cf-score">87<span class="cf-pct">%</span></div>
+          <div class="cf-sub">Ready to study ✓</div>
+        </div>
+        <div class="card card-eeg">
+          <div class="ce-label">Brainwaves</div>
+          <div class="ce-row"><span class="ce-name">Alpha</span><div class="ce-bar-bg"><div class="ce-bar" style="width:72%;background:#7c3aed;animation:barAnim 2.2s ease-in-out infinite"></div></div></div>
+          <div class="ce-row"><span class="ce-name">Beta</span><div class="ce-bar-bg"><div class="ce-bar" style="width:18%;background:#5b21b6;animation:barAnim 1.8s ease-in-out infinite 0.3s"></div></div></div>
+          <div class="ce-row"><span class="ce-name">Theta</span><div class="ce-bar-bg"><div class="ce-bar" style="width:65%;background:#4c1d95;animation:barAnim 2.8s ease-in-out infinite 0.6s"></div></div></div>
+        </div>
+      </div>
     </div>
-
-    <section class="waitlist" id="waitlist">
-      <h2>Ready for your<br>first Brain Workout?</h2>
-      <form class="waitlist-form" onsubmit="handleSubmit(event)">
-        <input type="email" placeholder="your@email.com" required />
-        <button type="submit">Join the waitlist</button>
-      </form>
-      <p class="confirm" id="confirm" style="display:none">&#10003; You're on the list. We'll be in touch!</p>
-    </section>
   </main>
 
   <footer>© 2026 Neurotropy</footer>
