@@ -402,10 +402,11 @@ main {
 /* ── Team founders image ── */
 .team-founders-img {
   width: 100%;
-  max-width: 360px;
+  max-width: 600px;
   height: auto;
   display: block;
-  margin: 0 auto 64px;
+  margin: 0 auto 0;
+  mix-blend-mode: screen;
   transform: translateY(-2cm);
 }
 
