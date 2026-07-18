@@ -18,9 +18,6 @@ body {
   color: var(--text);
   display: flex;
   flex-direction: column;
-  background-image:
-    radial-gradient(ellipse 900px 600px at 50% 0%, rgba(120,80,220,0.18), transparent 65%),
-    radial-gradient(ellipse 400px 300px at 80% 80%, rgba(168,85,247,0.06), transparent 60%);
 }
 
 @keyframes fadeUp {
