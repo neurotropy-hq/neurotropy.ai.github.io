@@ -1,7 +1,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:         #08040f;
+  --bg:         #000000;
   --purple:     #a855f7;
   --purple-d:   #7c3aed;
   --border:     rgba(168,85,247,0.25);
@@ -34,7 +34,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(8,4,15,0.85);
+  background: rgba(0,0,0,0.9);
   backdrop-filter: blur(12px);
   border-bottom: 0.5px solid var(--border);
 }
@@ -465,7 +465,6 @@ main {
 /* ── Final CTA ── */
 .cta-section {
   border-top: 0.5px solid var(--border);
-  background: radial-gradient(ellipse 600px 300px at 50% 100%, rgba(120,80,220,0.12), transparent 70%);
 }
 
 .cta-sub {
