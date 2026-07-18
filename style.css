@@ -109,10 +109,11 @@ main {
   max-width: 1100px;
   padding: 100px 48px 80px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 64px;
   animation: fadeUp 0.6s ease both;
+  text-align: center;
 }
 
 .hero-text {
@@ -134,7 +135,7 @@ main {
 .hero-text .label,
 .hero-text .headline,
 .hero-text .value-props {
-  text-align: left;
+  text-align: center;
 }
 
 .label {
@@ -161,6 +162,8 @@ main {
   gap: 10px;
   text-align: left;
   align-self: center;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .value-props li {
@@ -403,7 +406,8 @@ main {
   height: auto;
   display: block;
   margin: 0 auto 64px;
-  border-radius: 16px;
+  mix-blend-mode: screen;
+  transform: translateY(-2cm);
 }
 
 /* ── Team ── */
