@@ -4,47 +4,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neurotropy – Warm up your Brain</title>
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
 <body>
 
-  <main>
-    <img src="logo.svg" alt="Neurotropy" class="logo" />
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <div class="nav-spacer"></div>
+    <img src="logo.svg" alt="Neurotropy" class="nav-logo" />
+    <div class="nav-right">
+      <a href="#waitlist" class="nav-cta">Join the waitlist</a>
+    </div>
+  </nav>
 
-    <div class="hero">
+  <main>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
       <div class="hero-text">
         <p class="label">Neurofeedback for learners</p>
-        <h1 class="headline">Stop losing the first hour.<br>Get your brain focused before you study</h1>
-        <section class="waitlist" id="waitlist">
-          <form class="waitlist-form" onsubmit="handleSubmit(event)">
-            <input type="email" placeholder="your@email.com" required />
-            <button type="submit">Join the waitlist</button>
-          </form>
-          <p class="confirm" id="confirm" style="display:none">&#10003; You're on the list. We'll be in touch!</p>
-        </section>
+        <h1 class="headline">Get your brain focused before you study</h1>
+        <ul class="value-props">
+          <li>Uses EEG neurofeedback to train your brain</li>
+          <li>Guides you into focus before you open a single book</li>
+          <li>Know when your brain is actually ready to learn</li>
+        </ul>
       </div>
+      <div class="hero-image">
+        <img src="founders.png" alt="Neurotropy founders" class="founders-img" />
+      </div>
+    </section>
 
-      <div class="hero-visual">
-        <div class="hero-img-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1715866549135-e3bc3c6148a9?w=600&q=80"
-            alt="Person wearing EEG headset"
-            class="hero-photo"
-          />
+
+
+
+<!-- ── OUR VISION ── -->
+    <section class="section vision-section">
+      <p class="section-label">Our Vision</p>
+      <h2 class="section-headline">The brain is the missing variable in learning</h2>
+      <div class="vision-body">
+        <p>We've all sat down to study and stared at the page. Not because the material was too hard, but because our brain simply wasn't ready yet. That can be pretty frustrating. So we started asking why.</p>
+        <p>It turns out your brain has states. Some are built for focus, others aren't. And with the right feedback, you can learn to shift into the right one. Neurotropy is our attempt to make that accessible.</p>
+      </div>
+    </section>
+
+    <!-- ── TEAM ── -->
+    <section class="section team-section">
+      <p class="section-label">Team</p>
+      <h2 class="section-headline">Built by learners, for learners</h2>
+      <div class="team-cards">
+        <div class="team-card">
+          <img src="henrik.png" alt="Henrik" class="team-avatar" />
+          <h3 class="team-name">Henrik</h3>
+          <p class="team-role">Co-Founder</p>
+          <p class="team-bio">Henrik combines a deep passion for learning with a drive to build technology that actually works. Frustrated by the gap between what neuroscience knows and what learners have access to, he co-founded Neurotropy to make brain-based learning tools a reality.</p>
         </div>
-        <div class="card card-focus">
-          <div class="cf-label">Focus score</div>
-          <div class="cf-score">87<span class="cf-pct">%</span></div>
-          <div class="cf-sub">Ready to study ✓</div>
-        </div>
-        <div class="card card-eeg">
-          <div class="ce-label">Brainwaves</div>
-          <div class="ce-row"><span class="ce-name">Alpha</span><div class="ce-bar-bg"><div class="ce-bar" style="width:72%;background:#7c3aed;animation:barAnim 2.2s ease-in-out infinite"></div></div></div>
-          <div class="ce-row"><span class="ce-name">Beta</span><div class="ce-bar-bg"><div class="ce-bar" style="width:18%;background:#5b21b6;animation:barAnim 1.8s ease-in-out infinite 0.3s"></div></div></div>
-          <div class="ce-row"><span class="ce-name">Theta</span><div class="ce-bar-bg"><div class="ce-bar" style="width:65%;background:#4c1d95;animation:barAnim 2.8s ease-in-out infinite 0.6s"></div></div></div>
+        <div class="team-card">
+          <img src="samar.png" alt="Samar" class="team-avatar" />
+          <h3 class="team-name">Samar</h3>
+          <p class="team-role">Co-Founder</p>
+          <p class="team-bio">Samar has a background in digital content, communications, and marketing. She co-founded Neurotropy to help bring a technology she genuinely believes in to the people who could benefit from it.</p>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- ── FINAL CTA ── -->
+    <section class="section cta-section">
+      <p class="section-label">Early access</p>
+      <h2 class="section-headline">Be first to train your brain</h2>
+      <p class="cta-sub">Neurotropy is in development. Join the waitlist and be one of the first to use it.</p>
+      <form class="waitlist-form waitlist-form-lg" onsubmit="handleSubmit2(event)">
+        <input type="email" placeholder="your@email.com" required />
+        <button type="submit">Join the waitlist</button>
+      </form>
+      <p class="confirm" id="confirm2" style="display:none">&#10003; You're on the list. We'll be in touch!</p>
+    </section>
+
   </main>
 
   <footer>© 2026 Neurotropy</footer>
@@ -54,6 +89,11 @@
       e.preventDefault();
       e.target.style.display = 'none';
       document.getElementById('confirm').style.display = 'block';
+    }
+    function handleSubmit2(e) {
+      e.preventDefault();
+      e.target.style.display = 'none';
+      document.getElementById('confirm2').style.display = 'block';
     }
   </script>
 
