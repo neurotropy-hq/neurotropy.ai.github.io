@@ -406,10 +406,7 @@ main {
   height: auto;
   display: block;
   margin: 0 auto 64px;
-  mix-blend-mode: screen;
   transform: translateY(-2cm);
-  -webkit-mask-image: radial-gradient(ellipse 75% 85% at 50% 50%, black 50%, transparent 100%);
-  mask-image: radial-gradient(ellipse 75% 85% at 50% 50%, black 50%, transparent 100%);
 }
 
 /* ── Team ── */
