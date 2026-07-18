@@ -406,8 +406,9 @@ main {
   height: auto;
   display: block;
   margin: 0 auto 0;
-  mix-blend-mode: screen;
   transform: translateY(-2cm);
+  -webkit-mask-image: radial-gradient(ellipse 80% 88% at 50% 52%, black 55%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 88% at 50% 52%, black 55%, transparent 100%);
 }
 
 /* ── Team ── */
