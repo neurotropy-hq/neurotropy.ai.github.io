@@ -396,6 +396,16 @@ main {
   font-style: italic;
 }
 
+/* ── Team founders image ── */
+.team-founders-img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  display: block;
+  margin: 0 auto 64px;
+  border-radius: 16px;
+}
+
 /* ── Team ── */
 .team-section { border-top: 0.5px solid var(--border); }
 
@@ -405,6 +415,10 @@ main {
   align-items: center;
   gap: 48px;
   width: 100%;
+}
+
+.team-card:nth-child(2) {
+  margin-top: 160px;
 }
 
 .team-card {
