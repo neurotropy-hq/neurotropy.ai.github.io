@@ -376,7 +376,7 @@ main {
 }
 
 /* â”€â”€ Vision â”€â”€ */
-.vision-section { }
+.vision-section { margin-top: -2cm; }
 
 .vision-body {
   max-width: 680px;
