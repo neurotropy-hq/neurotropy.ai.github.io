@@ -1,4 +1,4 @@
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+﻿*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
   --bg:         #000000;
@@ -21,7 +21,7 @@ body {
 }
 
 
-/* ── Nav ── */
+/* â”€â”€ Nav â”€â”€ */
 .nav {
   display: flex;
   align-items: center;
@@ -66,7 +66,7 @@ main {
 }
 .nav-cta:hover { background: var(--purple-d); }
 
-/* ── Shared section styles ── */
+/* â”€â”€ Shared section styles â”€â”€ */
 main {
   flex: 1;
   display: flex;
@@ -102,7 +102,7 @@ main {
   margin-bottom: 48px;
 }
 
-/* ── Hero ── */
+/* â”€â”€ Hero â”€â”€ */
 .hero {
   width: 100%;
   max-width: 1100px;
@@ -152,7 +152,7 @@ main {
   text-wrap: balance;
 }
 
-/* ── Value props ── */
+/* â”€â”€ Value props â”€â”€ */
 .value-props {
   list-style: none;
   display: flex;
@@ -173,13 +173,13 @@ main {
 }
 
 .value-props li::before {
-  content: '✓';
+  content: 'âœ“';
   color: var(--purple);
   font-weight: 700;
   flex-shrink: 0;
 }
 
-/* ── Waitlist ── */
+/* â”€â”€ Waitlist â”€â”€ */
 .waitlist { width: 100%; max-width: 480px; }
 
 .waitlist-form {
@@ -224,8 +224,8 @@ main {
   margin-top: 14px;
 }
 
-/* ── Problem section ── */
-.problem-section { border-top: 0.5px solid var(--border); }
+/* â”€â”€ Problem section â”€â”€ */
+.problem-section { }
 
 .problem-cards {
   display: grid;
@@ -260,7 +260,7 @@ main {
   line-height: 1.6;
 }
 
-/* ── Team label ── */
+/* â”€â”€ Team label â”€â”€ */
 .team-label {
   font-size: 12px;
   font-weight: 600;
@@ -270,7 +270,7 @@ main {
   margin-top: 16px;
 }
 
-/* ── Founders image ── */
+/* â”€â”€ Founders image â”€â”€ */
 .founders-wrap {
   position: relative;
   display: block;
@@ -292,8 +292,8 @@ main {
   pointer-events: none;
 }
 
-/* ── How it works ── */
-.how-section { border-top: 0.5px solid var(--border); }
+/* â”€â”€ How it works â”€â”€ */
+.how-section { }
 
 .steps {
   display: flex;
@@ -336,8 +336,8 @@ main {
   width: 40px;
 }
 
-/* ── Features ── */
-.features-section { border-top: 0.5px solid var(--border); }
+/* â”€â”€ Features â”€â”€ */
+.features-section { }
 
 .features {
   display: grid;
@@ -375,8 +375,8 @@ main {
   line-height: 1.6;
 }
 
-/* ── Vision ── */
-.vision-section { border-top: 0.5px solid var(--border); }
+/* â”€â”€ Vision â”€â”€ */
+.vision-section { }
 
 .vision-body {
   max-width: 680px;
@@ -397,7 +397,7 @@ main {
   font-style: italic;
 }
 
-/* ── Team founders image ── */
+/* â”€â”€ Team founders image â”€â”€ */
 .team-founders-img {
   width: 100%;
   max-width: 600px;
@@ -409,8 +409,8 @@ main {
   mask-image: radial-gradient(ellipse 80% 88% at 50% 52%, black 55%, transparent 100%);
 }
 
-/* ── Team ── */
-.team-section { border-top: 0.5px solid var(--border); }
+/* â”€â”€ Team â”€â”€ */
+.team-section { }
 
 .team-cards {
   display: flex;
@@ -464,7 +464,7 @@ main {
   line-height: 1.7;
 }
 
-/* ── Final CTA ── */
+/* â”€â”€ Final CTA â”€â”€ */
 .cta-section {
   }
 
@@ -476,7 +476,7 @@ main {
   max-width: 480px;
 }
 
-/* ── Footer ── */
+/* â”€â”€ Footer â”€â”€ */
 footer {
   flex-shrink: 0;
   padding: 28px;
@@ -485,7 +485,7 @@ footer {
   color: var(--text-hint);
   }
 
-/* ── Mobile ── */
+/* â”€â”€ Mobile â”€â”€ */
 @media (max-width: 800px) {
   .hero { flex-direction: column; align-items: center; text-align: center; padding: 60px 24px 48px; gap: 40px; }
   .hero-text .label, .hero-text .headline, .hero-text .value-props { text-align: center; }
