@@ -34,8 +34,8 @@ body {
   z-index: 100;
   background: rgba(0,0,0,0.9);
   backdrop-filter: blur(12px);
-  border-bottom: 0.5px solid var(--border);
 }
+
 
 main {
   padding-top: 72px;
@@ -466,8 +466,7 @@ main {
 
 /* ── Final CTA ── */
 .cta-section {
-  border-top: 0.5px solid var(--border);
-}
+  }
 
 .cta-sub {
   font-size: 16px;
@@ -484,8 +483,7 @@ footer {
   text-align: center;
   font-size: 12px;
   color: var(--text-hint);
-  border-top: 0.5px solid var(--border);
-}
+  }
 
 /* ── Mobile ── */
 @media (max-width: 800px) {
