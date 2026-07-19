@@ -166,7 +166,7 @@ main {
 .value-props li {
   font-size: 15px;
   color: var(--text-muted);
-  padding-left: 22px;
+  padding-left: 16px;
   position: relative;
 }
 
