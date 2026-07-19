@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum – Neurotropy</title>
+  <link rel="stylesheet" href="style.css?v=10" />
+  <style>
+    .impressum-body {
+      max-width: 640px;
+      width: 100%;
+      padding: 80px 32px 120px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .impressum-body h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .impressum-block h2 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--purple);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .impressum-block p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .impressum-block a {
+      color: var(--purple);
+      text-decoration: none;
+    }
+    .impressum-block a:hover {
+      text-decoration: underline;
+    }
+    .warn {
+      font-size: 13px;
+      color: var(--text-hint);
+      border-left: 2px solid var(--border);
+      padding-left: 12px;
+      margin-top: 8px;
+    }
+    @media (max-width: 680px) {
+      .impressum-body { padding: 48px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-spacer"></div>
+    <a href="index.html">
+      <img src="logo.svg" alt="Neurotropy" class="nav-logo" />
+    </a>
+    <div class="nav-right">
+      <a href="index.html#waitlist" class="nav-cta">Join the waitlist</a>
+    </div>
+  </nav>
+
+  <main style="align-items: center;">
+    <div class="impressum-body">
+
+      <h1>Impressum</h1>
+
+      <div class="impressum-block">
+        <h2>Angaben gemäß §5 TMG</h2>
+        <p>
+          Henrik Röhr &amp; Samar Angourani<br />
+          Neurotropy<br />
+          c/o Goethe Unibator<br />
+          Bertramshof – Am Steinernen Stock 1<br />
+          60320 Frankfurt am Main<br />
+          Deutschland
+        </p>
+      </div>
+
+      <div class="impressum-block">
+        <h2>Kontakt</h2>
+        <p>
+          E-Mail: <a href="mailto:neurotropy@protonmail.com">neurotropy@protonmail.com</a><br />
+          Telefon: [bitte ergänzen]
+        </p>
+        <p class="warn">⚠ Eine Telefonnummer ist nach §5 TMG verpflichtend. Bitte sobald verfügbar ergänzen.</p>
+      </div>
+
+      <div class="impressum-block">
+        <h2>Verantwortlich für den Inhalt nach §18 Abs. 2 MStV</h2>
+        <p>
+          Henrik Röhr &amp; Samar Angourani<br />
+          Bertramshof – Am Steinernen Stock 1<br />
+          60320 Frankfurt am Main
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>© 2026 Neurotropy</footer>
+
+</body>
+</html>
