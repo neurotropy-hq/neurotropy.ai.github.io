@@ -170,19 +170,18 @@ main {
 .value-props li {
   font-size: 15px;
   color: var(--text-muted);
-  padding-left: 18px;
-  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  align-items: start;
   line-height: 1.6;
 }
 
 .value-props li::before {
   content: '\2713';
-  position: absolute;
-  left: 0;
-  top: 0;
-  line-height: 1.6;
   color: var(--purple);
   font-weight: 700;
+  line-height: 1.6;
 }
 
 /* â”€â”€ Waitlist â”€â”€ */
