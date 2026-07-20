@@ -155,7 +155,7 @@ main {
   text-wrap: balance;
 }
 
-/* â”€â”€ Value props â”€â”€ */
+/* ── Value props ── */
 .value-props {
   list-style: none;
   display: flex;
@@ -170,16 +170,16 @@ main {
 .value-props li {
   font-size: 15px;
   color: var(--text-muted);
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
+  padding-left: 18px;
+  position: relative;
 }
 
 .value-props li::before {
   content: '\2713';
+  position: absolute;
+  left: 0;
   color: var(--purple);
   font-weight: 700;
-  flex-shrink: 0;
 }
 
 /* â”€â”€ Waitlist â”€â”€ */
@@ -511,8 +511,7 @@ footer {
   .headline { font-size: clamp(22px, 6vw, 32px); }
   .hero { padding: 40px 20px 36px; }
   .value-props,
-  .hero-text .value-props { text-align: left; width: 100%; align-self: flex-start; }
-  .value-props li { gap: 6px; }
+  .hero-text .value-props { text-align: left; width: auto; align-self: flex-start; }
   .vision-section { margin-top: 0; }
   .problem-cards { grid-template-columns: 1fr; }
   .features { grid-template-columns: 1fr; }
