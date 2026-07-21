@@ -419,7 +419,7 @@ main {
 .team-cards {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: center;
   gap: 48px;
   width: 100%;
@@ -469,7 +469,7 @@ main {
 }
 
 .team-contact {
-  margin-top: 8px;
+  margin-top: auto;
   padding: 8px 20px;
   border-radius: 40px;
   border: 0.5px solid var(--border);
