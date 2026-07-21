@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get in Touch – Neurotropy</title>
+  <link rel="stylesheet" href="style.css?v=26" />
+  <style>
+    .contact-body {
+      max-width: 640px;
+      width: 100%;
+      padding: 60px 32px 120px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .contact-body h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .contact-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: rgba(168,85,247,0.06);
+      border: 0.5px solid rgba(168,85,247,0.25);
+      border-radius: 16px;
+      padding: 24px 28px;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .contact-card:hover {
+      border-color: rgba(168,85,247,0.55);
+      background: rgba(168,85,247,0.1);
+    }
+    .contact-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      border: 1.5px solid rgba(168,85,247,0.35);
+      flex-shrink: 0;
+    }
+    .contact-avatar-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(168,85,247,0.15);
+      border: 1.5px solid rgba(168,85,247,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-avatar-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+    .contact-info {
+      flex: 1;
+    }
+    .contact-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .contact-role {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--purple);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .contact-arrow {
+      color: var(--purple);
+      font-size: 20px;
+      opacity: 0.7;
+    }
+    @media (max-width: 680px) {
+      .contact-body { padding: 40px 20px 80px; }
+      .contact-card { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-spacer"></div>
+    <a href="index.html">
+      <img src="logo.svg" alt="Neurotropy" class="nav-logo" />
+    </a>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
+    </div>
+  </nav>
+
+  <main style="align-items: center;">
+    <div class="contact-body">
+
+      <h1>Get in Touch</h1>
+
+      <div class="contact-cards">
+
+        <!-- Neurotropy -->
+        <a class="contact-card" href="https://www.linkedin.com/company/135674768/" target="_blank" rel="noopener">
+          <div class="contact-avatar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="53 4 54 74" fill="none">
+              <path d="M80 6C66 6 55 17 55 30.5c0 7.5 3.5 14 9 18v6.5h32v-6.5c5.5-4 9-10.5 9-18C105 17 94 6 80 6z" fill="rgba(168,85,247,0.12)" stroke="#a855f7" stroke-width="1.6" stroke-linejoin="round"/>
+              <rect x="63" y="60.5" width="34" height="3.5" rx="1.75" fill="#a855f7"/>
+              <rect x="65.5" y="66" width="29" height="3.5" rx="1.75" fill="rgba(168,85,247,0.5)"/>
+              <rect x="68.5" y="71.5" width="23" height="3.5" rx="1.75" fill="rgba(168,85,247,0.2)"/>
+              <polyline points="55,30.5 61,30.5 64,22 67.5,39 71,27.5 74,33 77,25 80,31 83,23.5 86.5,37 90,30.5 96,30.5 105,30.5" stroke="#a855f7" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <p class="contact-name">Neurotropy</p>
+            <p class="contact-role">Company · LinkedIn</p>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+
+        <!-- Henrik -->
+        <a class="contact-card" href="https://www.linkedin.com/in/henrik-r-1109/" target="_blank" rel="noopener">
+          <img src="henrik.png" alt="Henrik" class="contact-avatar" />
+          <div class="contact-info">
+            <p class="contact-name">Henrik Röhr</p>
+            <p class="contact-role">LinkedIn</p>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+
+        <!-- Samar -->
+        <a class="contact-card" href="https://www.linkedin.com/in/samar-angourani-9060851a6/" target="_blank" rel="noopener">
+          <img src="samar.png" alt="Samar" class="contact-avatar" />
+          <div class="contact-info">
+            <p class="contact-name">Samar Angourani</p>
+            <p class="contact-role">LinkedIn</p>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2026 Neurotropy · <a href="impressum.html" style="color: inherit; text-decoration: none;">Impressum</a></footer>
+
+</body>
+</html>
