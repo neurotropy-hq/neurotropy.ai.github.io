@@ -475,21 +475,19 @@ main {
 
 .team-contact {
   margin-top: auto;
-  padding: 8px 20px;
-  border-radius: 40px;
-  border: 0.5px solid var(--border);
-  color: var(--purple);
-  font-size: 13px;
-  font-weight: 600;
+  padding: 6px;
+  border-radius: 8px;
+  border: none;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  transition: background 0.2s, border-color 0.2s;
+  justify-content: center;
+  transition: opacity 0.2s, transform 0.15s;
+  opacity: 0.85;
 }
 .team-contact:hover {
-  background: rgba(168,85,247,0.1);
-  border-color: rgba(168,85,247,0.5);
+  opacity: 1;
+  transform: scale(1.08);
 }
 
 /* â”€â”€ Final CTA â”€â”€ */
