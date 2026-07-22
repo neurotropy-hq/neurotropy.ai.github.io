@@ -169,18 +169,23 @@ main {
   font-size: 15px;
   color: var(--text-muted);
   display: grid;
-  grid-template-columns: 14px 1fr;
-  gap: 6px;
-  align-items: start;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  align-items: center;
   line-height: 1.6;
   text-align: left;
 }
 
 .value-props li::before {
-  content: '\2713';
-  color: var(--purple);
-  font-weight: 700;
-  line-height: 1.6;
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='53 4 54 74'%3E%3Cpath d='M80 6C66 6 55 17 55 30.5c0 7.5 3.5 14 9 18v6.5h32v-6.5c5.5-4 9-10.5 9-18C105 17 94 6 80 6z' fill='rgba(168,85,247,0.2)' stroke='%23a855f7' stroke-width='3' stroke-linejoin='round'/%3E%3Crect x='63' y='60.5' width='34' height='4.5' rx='2.25' fill='%23a855f7'/%3E%3Crect x='65.5' y='67' width='29' height='4.5' rx='2.25' fill='rgba(168,85,247,0.5)'/%3E%3Crect x='68.5' y='73.5' width='23' height='4.5' rx='2.25' fill='rgba(168,85,247,0.25)'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
 }
 
 /* â”€â”€ Waitlist â”€â”€ */
