@@ -473,21 +473,28 @@ main {
   line-height: 1.7;
 }
 
+.team-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
 .team-contact {
-  margin-top: auto;
-  padding: 6px;
-  border-radius: 8px;
+  padding: 3px;
+  border-radius: 6px;
   border: none;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: opacity 0.2s, transform 0.15s;
-  opacity: 0.85;
+  opacity: 0.7;
+  flex-shrink: 0;
 }
 .team-contact:hover {
   opacity: 1;
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
 /* â”€â”€ Final CTA â”€â”€ */
