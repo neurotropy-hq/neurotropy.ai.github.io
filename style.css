@@ -530,6 +530,60 @@ footer {
   .hero-image { flex: none; width: 100%; max-width: 320px; }
 }
 
+/* ── Legal pages (Privacy, Datenschutz, Impressum) ── */
+.legal-body {
+  max-width: 70ch;
+  width: 100%;
+  padding: 60px 32px 120px;
+  display: flex;
+  flex-direction: column;
+}
+.legal-toggle-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+.legal-toggle-link {
+  font-size: 13px;
+  color: var(--text-hint);
+  text-decoration: none;
+}
+.legal-toggle-link:hover { color: var(--text-muted); text-decoration: underline; }
+.legal-body h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.legal-body h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 40px;
+  margin-bottom: 6px;
+}
+.legal-body p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.legal-body ul {
+  margin: 0 0 16px;
+  padding-left: 20px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.legal-body li { margin-bottom: 4px; }
+.legal-body a { color: var(--purple); text-decoration: underline; }
+.legal-body a:hover { color: var(--purple-d); }
+.legal-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 56px 0;
+}
+
 @media (max-width: 680px) {
   .nav { padding: 10px 16px; }
   .nav-logo { width: 120px; }
@@ -555,6 +609,7 @@ footer {
   .waitlist-form input[type="email"] { min-width: unset; }
   .cta-sub { font-size: 14px; }
   footer { padding: 20px 16px; }
+  .legal-body { padding: 40px 20px 80px; }
 }
   .section { padding: 56px 20px; }
   .problem-cards { grid-template-columns: 1fr; }
