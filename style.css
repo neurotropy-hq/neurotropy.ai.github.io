@@ -509,6 +509,15 @@ main {
   max-width: 480px;
 }
 
+.form-disclaimer {
+  font-size: 12px;
+  color: var(--text-hint);
+  margin-top: 12px;
+  max-width: 480px;
+}
+.form-disclaimer a { color: inherit; text-decoration: underline; }
+.form-disclaimer a:hover { color: var(--text-muted); }
+
 /* â”€â”€ Footer â”€â”€ */
 footer {
   flex-shrink: 0;
