@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neurotropy – Warm up your Brain</title>
-  <link rel="stylesheet" href="style.css?v=32" />
+  <link rel="stylesheet" href="style.css?v=33" />
 
   <!-- MailerLite Universal -->
   <script>
@@ -20,7 +20,14 @@
 
   <!-- ── NAV ── -->
   <nav class="nav">
-    <img src="logo.svg" alt="Neurotropy" class="nav-logo" />
+    <a href="index.html"><img src="logo.svg" alt="Neurotropy" class="nav-logo" /></a>
+    <div class="nav-tabs">
+      <a href="index.html" class="nav-tab active" data-en="Home" data-de="Start">Home</a>
+      <a href="#team" class="nav-tab" data-en="Team" data-de="Team">Team</a>
+      <a href="#" class="nav-tab" data-en="Blog" data-de="Blog">Blog</a>
+      <a href="#cta" class="nav-tab" data-en="Get in Touch" data-de="Kontakt">Get in Touch</a>
+      <button class="nav-lang" id="lang-toggle" onclick="toggleLang()">DE</button>
+    </div>
   </nav>
 
   <main>
@@ -51,7 +58,7 @@
     </section>
 
     <!-- ── TEAM ── -->
-    <section class="section team-section">
+    <section class="section team-section" id="team">
       <p class="section-label">Team</p>
       <h2 class="section-headline">Built by learners, for learners</h2>
 <div class="team-cards">
@@ -85,7 +92,7 @@
     </section>
 
     <!-- ── FINAL CTA ── -->
-    <section class="section cta-section">
+    <section class="section cta-section" id="cta">
       <p class="section-label">Early access</p>
       <h2 class="section-headline">Ready for your first brain workout?</h2>
       <p class="cta-sub">Neurotropy is in development. Join the waitlist and be one of the first to use it.</p>
@@ -118,6 +125,21 @@
       e.target.style.display = 'none';
       document.getElementById('confirm2').style.display = 'block';
     }
+
+    // Language toggle
+    var currentLang = localStorage.getItem('lang') || 'en';
+    function applyLang(lang) {
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+      document.getElementById('lang-toggle').textContent = lang === 'en' ? 'DE' : 'EN';
+      document.querySelectorAll('[data-en]').forEach(function(el) {
+        el.textContent = lang === 'en' ? el.dataset.en : el.dataset.de;
+      });
+    }
+    function toggleLang() {
+      applyLang(currentLang === 'en' ? 'de' : 'en');
+    }
+    applyLang(currentLang);
   </script>
 
 </body>

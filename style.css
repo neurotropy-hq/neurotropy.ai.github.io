@@ -21,12 +21,13 @@ body {
 }
 
 
-/* â”€â”€ Nav â”€â”€ */
+/* ── Nav ── */
 .nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 16px 0;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 60px;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,21 +36,56 @@ body {
   background: rgba(0,0,0,0.92);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid rgba(168,85,247,0.15);
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
 
-
 main {
-  padding-top: 180px;
+  padding-top: 60px;
 }
-
-.nav-spacer { flex: 1; }
 
 .nav-logo {
-  width: 300px;
+  width: 200px;
   height: auto;
 }
+
+.nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.nav-tab {
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.nav-tab:hover { color: var(--text); background: rgba(168,85,247,0.07); }
+.nav-tab.active { color: var(--purple); }
+
+.nav-lang {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border-radius: 7px;
+  border: 0.5px solid rgba(168,85,247,0.4);
+  background: none;
+  color: var(--purple);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  transition: background 0.15s;
+}
+.nav-lang:hover { background: rgba(168,85,247,0.1); }
+
+.nav-spacer { flex: 1; }
 
 .nav-right {
   flex: 1;
@@ -594,10 +630,11 @@ footer {
 }
 
 @media (max-width: 680px) {
-  .nav { padding: 10px 16px; }
+  .nav { padding: 0 16px; height: auto; flex-wrap: wrap; gap: 4px; padding-top: 10px; padding-bottom: 6px; }
   .nav-logo { width: 120px; }
-  .nav-cta { padding: 7px 12px; font-size: 11px; white-space: nowrap; }
-  main { padding-top: 120px; }
+  .nav-tabs { gap: 0; overflow-x: auto; }
+  .nav-tab { padding: 5px 10px; font-size: 11px; }
+  main { padding-top: 90px; }
   .section { padding: 48px 20px; }
   .section-label { font-size: 16px; }
   .section-headline { font-size: clamp(16px, 4vw, 22px); margin-bottom: 32px; }
