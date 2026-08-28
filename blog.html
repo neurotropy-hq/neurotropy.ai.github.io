@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog – Neurotropy</title>
+  <link rel="stylesheet" href="style.css?v=36" />
+  <style>
+    .blog-hero {
+      width: 100%;
+      max-width: 720px;
+      padding: 80px 32px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .blog-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--purple);
+    }
+
+    .blog-title {
+      font-size: clamp(24px, 3vw, 38px);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.18;
+      text-wrap: balance;
+      letter-spacing: -0.01em;
+    }
+
+    .blog-meta {
+      font-size: 13px;
+      color: var(--text-hint);
+      letter-spacing: 0.03em;
+    }
+
+    .blog-divider {
+      width: 100%;
+      max-width: 720px;
+      height: 0.5px;
+      background: var(--border);
+      margin: 0 32px;
+    }
+
+    .blog-body {
+      width: 100%;
+      max-width: 720px;
+      padding: 48px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .blog-body p {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.85;
+    }
+
+    .blog-body h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple);
+      margin-top: 16px;
+    }
+
+    .references {
+      width: 100%;
+      max-width: 720px;
+      padding: 32px 32px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border-top: 0.5px solid var(--border);
+      margin-top: 16px;
+    }
+
+    .references h3 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-hint);
+      margin-bottom: 4px;
+    }
+
+    .ref {
+      font-size: 12px;
+      color: var(--text-hint);
+      line-height: 1.7;
+    }
+
+    .ref a {
+      color: var(--purple);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .ref a:hover { text-decoration: underline; }
+
+    .footnote {
+      font-size: 13px;
+      color: var(--text-hint);
+      border-left: 2px solid var(--border);
+      padding-left: 16px;
+      font-style: italic;
+    }
+
+    @media (max-width: 680px) {
+      .blog-hero, .blog-body, .references { padding-left: 20px; padding-right: 20px; }
+      .blog-body p { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <a href="index.html"><img src="logo.svg" alt="Neurotropy" class="nav-logo" /></a>
+    <div class="nav-tabs">
+      <a href="index.html" class="nav-tab" data-en="Home" data-de="Start">Home</a>
+      <a href="index.html#team" class="nav-tab" data-en="Team" data-de="Team">Team</a>
+      <a href="blog.html" class="nav-tab active" data-en="Blog" data-de="Blog">Blog</a>
+      <a href="index.html#cta" class="nav-tab" data-en="Get in Touch" data-de="Kontakt">Get in Touch</a>
+      <button class="nav-lang" id="lang-toggle" onclick="toggleLang()">DE</button>
+    </div>
+  </nav>
+
+  <main style="align-items: center;">
+
+    <div class="blog-hero">
+      <p class="blog-eyebrow">Blog</p>
+      <h1 class="blog-title">Vom Fahrradfahren zu Neurofeedback: Warum Lernen Feedback braucht</h1>
+      <p class="blog-meta">Neurotropy · 2026</p>
+    </div>
+
+    <div class="blog-divider"></div>
+
+    <div class="blog-body">
+
+      <p>Alles, was wir jemals gelernt haben, haben wir durch Feedback gelernt, also Informationen, die wir von unserem Körper und unserer Umgebung infolge unserer eigenen Handlungen erhalten haben. Als wir zum ersten Mal Fahrrad fuhren, haben wir uns das Knie aufgeschlagen, und der Schmerz war „negatives" Feedback. Nach einigen Versuchen hat es dann endlich geklappt, und die Euphorie des Fahrens war „positives" Feedback. Unser Nervensystem hat durch viel Ausprobieren gelernt, eine Vielzahl von Muskeln genau so anzusteuern, dass wir die Balance halten und geradeaus fahren. Als wir sprechen lernten, mussten wir eine Unmenge von kleinen Muskeln in unserer Zunge, Lippen, Lunge und Stimmbändern kontrollieren lernen, damit sie Laute produzieren, die andere Menschen verstehen. Auch hier haben wir Feedback erhalten, nämlich durch die Menschen um uns herum. Wurden wir verstanden – zum Beispiel, indem wir bekamen, was wir wollten –, erhielten wir positives Feedback. Unser Nervensystem hat gelernt: „mehr davon".</p>
+
+      <p>Der biologische Prozess, der dieser Art von Lernen zugrunde liegt, nennt sich Neuroplastizität. Die Neuronen, die unser Nervensystem bilden, sind „plastisch", das heißt, sie sind formbar und verändern sich. Aus dieser Sicht bedeutet Lernen, dass unser Nervensystem ständig kleine Veränderungen vornimmt, wodurch wir beispielsweise die genaue Kombination von Muskelanspannung herausfinden, die notwendig ist, um Fahrrad zu fahren. Dieser Prozess funktioniert aber nur unter einer wichtigen Voraussetzung: Unser Nervensystem benötigt Feedback, um zu wissen, welche Art von Anpassungen erforderlich sind. Bleibt dieses Feedback aus, ist Lernen nicht möglich. Ein tragisches Beispiel dafür sind schwer vernachlässigte Kinder, die in ihren ersten Lebensjahren kaum sprachlichen Kontakt erfahren: Obwohl mit ihrem Sprachapparat und Gehör oft alles in Ordnung ist, lernen sie ohne die ständige sprachliche Rückmeldung ihrer Umgebung nicht, richtig zu sprechen.</p>
+
+      <p>Die Situation, kein Feedback zu erhalten und deshalb nicht lernen zu können, ist nicht nur auf vernachlässigte Kinder beschränkt. Zum Beispiel nehmen die meisten Menschen das Echo von Geräuschen in ihrer Umgebung normalerweise nicht bewusst wahr. Sie sind daher nicht in der Lage, Echoortung zu erlernen, wie beispielsweise Fledermäuse es tun. Hierzu bestehen jedoch Ausnahmen, denn einige blinde Menschen sind in der Lage, Klicklaute zu erzeugen, wodurch sie ihre Umgebung durch Echoortung wahrnehmen können. Sobald wir Feedback erhalten, können wir lernen, es uns zunutze zu machen.</p>
+
+      <p>Diese Erkenntnis bildet die Grundlage von Biofeedback. Die Idee ist Folgende: Wenn wir einen Prozess in unserem Körper wahrnehmen, können wir in vielen Fällen lernen, diesen zu regulieren. Zum Beispiel können die wenigsten Menschen willentlich ihre Herzratenvariabilität oder Hautleitfähigkeit beeinflussen, schlicht, weil das Gehirn normalerweise keinen bewussten „Messwert" über diese physiologischen Zustände bekommt. Gibt man Menschen aber ein Feedbacksignal (z.&nbsp;B. über einen Monitor oder einen Ton), lernen sie häufig schnell, diese Prozesse zu steuern.</p>
+
+      <p>Eine besondere Art von Biofeedback ist Neurofeedback, denn hier bezieht sich das Feedback spezifisch auf Prozesse im Gehirn. Während wir normalerweise unsere Gehirnwellen nicht direkt wahrnehmen, können wir durch Feedback lernen, diese zu regulieren. Ein bekanntes Anwendungsfeld hierfür sind Aufmerksamkeitsstörungen wie ADHS, bei denen Neurofeedback zur Behandlung eingesetzt wird. Konzentrationsschwierigkeiten gehen häufig mit bestimmten Wellenmustern des Gehirns einher. Neurofeedback-Training zielt darauf ab, diese Muster zu verändern und so die Aufmerksamkeitsregulation zu unterstützen.</p>
+
+      <p>Bei Neurotropy nutzen wir dieses Prinzip, um eine unserer wichtigsten Fähigkeiten zu verbessern: Lernen. Die Hirnforschung hat eine Vielzahl von Gehirnmustern identifiziert, die mit verbesserter Lernfähigkeit zusammenhängen. Hierauf aufbauende Studien und Meta-Analysen konnten zeigen, dass diese Gehirnmuster durch Neurofeedback-Training reguliert werden können und das Arbeits- und episodische Gedächtnis verbessern*. Mit Neurotropy wollen wir diese Erkenntnisse aus dem Labor in den Alltag bringen: Durch ein komfortables EEG-Stirnband werden die Gehirnströme gemessen und die für Lernen relevanten Aspekte der Gehirnaktivität in ein Feedback-Signal umgewandelt. Dieses Feedback ermöglicht es Nutzerinnen und Nutzern, ihr Gehirn in einen Zustand zu regulieren, in dem Lernen besonders gut funktioniert und Informationen besser gespeichert werden.</p>
+
+      <p class="footnote">* Siehe Referenzen unten.</p>
+
+    </div>
+
+    <div class="references">
+      <h3>Referenzen</h3>
+
+      <p class="ref">Enriquez-Geppert, S., Smit, D., Eschmann, K. C. J., Marcos-Martínez, D., Sanchez, R. H., Hsieh, S., Dehais, F., &amp; Huster, R. J. (2026). A mega-analysis of EEG-based frontal-midline theta neurofeedback reveals learning dynamics, individual variability, and response profiles. <em>NeuroImage, 329</em>, 121820. <a href="https://doi.org/10.1016/j.neuroimage.2026.121820" target="_blank" rel="noopener">https://doi.org/10.1016/j.neuroimage.2026.121820</a></p>
+
+      <p class="ref">Eschmann, K. C. J., Bader, R., &amp; Mecklinger, A. (2020). Improving episodic memory: Frontal-midline theta neurofeedback training increases source memory performance. <em>NeuroImage, 222</em>, 117219. <a href="https://doi.org/10.1016/j.neuroimage.2020.117219" target="_blank" rel="noopener">https://doi.org/10.1016/j.neuroimage.2020.117219</a></p>
+
+      <p class="ref">Hsueh, J.-J., Chen, T.-S., Chen, J.-J., &amp; Shaw, F.-Z. (2016). Neurofeedback training of EEG alpha rhythm enhances episodic and working memory. <em>Human Brain Mapping, 37</em>(7), 2662–2675. <a href="https://doi.org/10.1002/hbm.23201" target="_blank" rel="noopener">https://doi.org/10.1002/hbm.23201</a></p>
+
+      <p class="ref">Tseng, Y.-H., Tamura, K., &amp; Okamoto, T. (2021). Neurofeedback training improves episodic and semantic long-term memory performance. <em>Scientific Reports, 11</em>(1), 17274. <a href="https://doi.org/10.1038/s41598-021-96726-5" target="_blank" rel="noopener">https://doi.org/10.1038/s41598-021-96726-5</a></p>
+
+      <p class="ref">Yeh, W.-H., Hsueh, J.-J., &amp; Shaw, F.-Z. (2020). Neurofeedback of Alpha Activity on Memory in Healthy Participants: A Systematic Review and Meta-Analysis. <em>Frontiers in Human Neuroscience, 14</em>, 562360. <a href="https://doi.org/10.3389/fnhum.2020.562360" target="_blank" rel="noopener">https://doi.org/10.3389/fnhum.2020.562360</a></p>
+
+      <p class="ref">Yeh, W.-H., Ju, Y.-J., Liu, Y.-T., &amp; Wang, T.-Y. (2022). Systematic Review and Meta-Analysis on the Effects of Neurofeedback Training of Theta Activity on Working Memory and Episodic Memory in Healthy Population. <em>International Journal of Environmental Research and Public Health, 19</em>(17), 11037. <a href="https://doi.org/10.3390/ijerph191711037" target="_blank" rel="noopener">https://doi.org/10.3390/ijerph191711037</a></p>
+    </div>
+
+  </main>
+
+  <footer>© 2026 Neurotropy · <a href="impressum.html" style="color: inherit; text-decoration: none;">Impressum</a></footer>
+
+  <script>
+    var currentLang = localStorage.getItem('lang') || 'en';
+    function applyLang(lang) {
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+      document.getElementById('lang-toggle').textContent = lang === 'en' ? 'DE' : 'EN';
+      document.querySelectorAll('[data-en]').forEach(function(el) {
+        el.textContent = lang === 'en' ? el.dataset.en : el.dataset.de;
+      });
+    }
+    function toggleLang() { applyLang(currentLang === 'en' ? 'de' : 'en'); }
+    applyLang(currentLang);
+  </script>
+
+</body>
+</html>
