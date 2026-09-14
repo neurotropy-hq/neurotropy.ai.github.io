@@ -259,14 +259,12 @@
     // In-page router: swaps <main> content between Home and Blog via fetch,
     // instead of doing a real page navigation, so switching tabs never shows
     // a page reload -- it just feels like a tab changing. Content is
-    // prefetched in the background so the swap is instant, and a short
-    // opacity crossfade smooths out the transition either way.
+    // prefetched in the background so the swap is instant and immediate,
+    // with no fade or other visible in-between state.
     var ntHomeMain = null;
     var ntHomeTitle = document.title;
     var ntBlogCache = null; // { main, title, styleHTML }
     var ntCurrentPage = 'home';
-    var ntMainEl = document.querySelector('main');
-    ntMainEl.style.transition = 'opacity 0.16s ease';
 
     function ntCaptureHome() {
       if (ntHomeMain === null) ntHomeMain = document.querySelector('main').innerHTML;
@@ -294,31 +292,18 @@
       }
     }
 
-    function ntFadeOut(cb) {
-      ntMainEl.style.opacity = '0';
-      setTimeout(cb, 160);
-    }
-
-    function ntFadeIn() {
-      void ntMainEl.offsetWidth; // force reflow so the fade-in actually animates
-      ntMainEl.style.opacity = '1';
-    }
-
     function ntShowHome(scrollTarget) {
       if (ntCurrentPage === 'home') {
         if (scrollTarget) { ntScrollToId(scrollTarget); } else { window.scrollTo(0, 0); }
         return;
       }
       ntCaptureHome();
-      ntFadeOut(function() {
-        document.querySelector('main').innerHTML = ntHomeMain;
-        document.title = ntHomeTitle;
-        ntCurrentPage = 'home';
-        applyLang(currentLang);
-        if (history.pushState) { history.pushState({ ntPage: 'home' }, '', 'index.html'); }
-        if (scrollTarget) { ntScrollToId(scrollTarget); } else { window.scrollTo(0, 0); }
-        ntFadeIn();
-      });
+      document.querySelector('main').innerHTML = ntHomeMain;
+      document.title = ntHomeTitle;
+      ntCurrentPage = 'home';
+      applyLang(currentLang);
+      if (history.pushState) { history.pushState({ ntPage: 'home' }, '', 'index.html'); }
+      if (scrollTarget) { ntScrollToId(scrollTarget); } else { window.scrollTo(0, 0); }
     }
 
     function ntRenderBlog(data) {
@@ -354,12 +339,9 @@
 
     function ntShowBlog() {
       ntCaptureHome();
-      ntFadeOut(function() {
-        ntFetchBlog().then(function(data) {
-          ntRenderBlog(data);
-          ntFadeIn();
-        }).catch(function() { window.location.href = 'blog.html'; });
-      });
+      ntFetchBlog().then(function(data) {
+        ntRenderBlog(data);
+      }).catch(function() { window.location.href = 'blog.html'; });
     }
 
     function ntGo(event, page, scrollTarget) {

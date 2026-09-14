@@ -232,14 +232,12 @@
     // In-page router: swaps <main> content between Blog and Home via fetch,
     // instead of doing a real page navigation, so switching tabs never shows
     // a page reload -- it just feels like a tab changing. Content is
-    // prefetched in the background so the swap is instant, and a short
-    // opacity crossfade smooths out the transition either way.
+    // prefetched in the background so the swap is instant and immediate,
+    // with no fade or other visible in-between state.
     var ntBlogMain = null;
     var ntBlogTitle = document.title;
     var ntHomeCache = null; // { main, title }
     var ntCurrentPage = 'blog';
-    var ntMainEl = document.querySelector('main');
-    ntMainEl.style.transition = 'opacity 0.16s ease';
 
     function ntCaptureBlog() {
       if (ntBlogMain === null) ntBlogMain = document.querySelector('main').innerHTML;
@@ -267,31 +265,18 @@
       }
     }
 
-    function ntFadeOut(cb) {
-      ntMainEl.style.opacity = '0';
-      setTimeout(cb, 160);
-    }
-
-    function ntFadeIn() {
-      void ntMainEl.offsetWidth; // force reflow so the fade-in actually animates
-      ntMainEl.style.opacity = '1';
-    }
-
     function ntShowBlogSelf(scrollTarget) {
       if (ntCurrentPage === 'blog') {
         if (scrollTarget) { ntScrollToId(scrollTarget); } else { window.scrollTo(0, 0); }
         return;
       }
       ntCaptureBlog();
-      ntFadeOut(function() {
-        document.querySelector('main').innerHTML = ntBlogMain;
-        document.title = ntBlogTitle;
-        ntCurrentPage = 'blog';
-        applyLang(currentLang);
-        if (history.pushState) { history.pushState({ ntPage: 'blog' }, '', 'blog.html'); }
-        window.scrollTo(0, 0);
-        ntFadeIn();
-      });
+      document.querySelector('main').innerHTML = ntBlogMain;
+      document.title = ntBlogTitle;
+      ntCurrentPage = 'blog';
+      applyLang(currentLang);
+      if (history.pushState) { history.pushState({ ntPage: 'blog' }, '', 'blog.html'); }
+      window.scrollTo(0, 0);
     }
 
     function ntRenderHome(data, scrollTarget) {
@@ -316,12 +301,9 @@
 
     function ntShowHome(scrollTarget) {
       ntCaptureBlog();
-      ntFadeOut(function() {
-        ntFetchHome().then(function(data) {
-          ntRenderHome(data, scrollTarget);
-          ntFadeIn();
-        }).catch(function() { window.location.href = 'index.html' + (scrollTarget ? '#' + scrollTarget : ''); });
-      });
+      ntFetchHome().then(function(data) {
+        ntRenderHome(data, scrollTarget);
+      }).catch(function() { window.location.href = 'index.html' + (scrollTarget ? '#' + scrollTarget : ''); });
     }
 
     function ntGo(event, page, scrollTarget) {
