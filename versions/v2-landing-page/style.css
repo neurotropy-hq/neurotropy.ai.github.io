@@ -1,0 +1,340 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #08040f;
+  --purple:   #a855f7;
+  --purple-d: #7c3aed;
+  --border:   rgba(168,85,247,0.14);
+  --border-2: rgba(168,85,247,0.30);
+  --text:     #f0e6ff;
+  --text-muted: #b09acc;
+  --text-hint:  #6b5080;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  background-image:
+    radial-gradient(ellipse 700px 400px at 50% 30%, rgba(120,80,220,0.15), transparent 65%),
+    radial-gradient(ellipse 400px 300px at 80% 80%, rgba(168,85,247,0.06), transparent 60%);
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.6); }
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-top: 0.8cm;
+  margin-bottom: 14px;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.description {
+  font-size: 12px;
+  color: var(--text-muted);
+  max-width: 280px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  animation: fadeUp 0.7s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: 40px;
+  border: 0.5px solid var(--border-2);
+  color: var(--purple);
+  background: rgba(168,85,247,0.08);
+  animation: fadeUp 0.7s ease 0.4s forwards;
+  opacity: 0;
+}
+
+.banner-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--purple);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 40px;
+  border: 0.5px solid var(--border-2);
+  color: var(--purple);
+  background: rgba(168,85,247,0.08);
+  margin-bottom: 60px;
+}
+
+.chip-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--purple);
+}
+
+.waitlist h2 {
+  font-size: clamp(13px, 2.1vw, 20px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 32px;
+  color: var(--text-muted);
+  -webkit-text-fill-color: unset;
+}
+
+.waitlist-sub {
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-bottom: 26px;
+}
+
+.waitlist {
+  margin-top: 48px;
+  animation: fadeUp 0.7s ease 0.6s forwards;
+  opacity: 0;
+}
+
+.waitlist-form {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.waitlist-form input[type="email"] {
+  padding: 8px 13px;
+  border-radius: 40px;
+  border: 0.5px solid var(--border-2);
+  background: rgba(168,85,247,0.07);
+  color: var(--text);
+  font-size: 11px;
+  outline: none;
+  min-width: 154px;
+}
+
+.waitlist-form input[type="email"]::placeholder {
+  color: var(--text-hint);
+}
+
+.waitlist-form button {
+  padding: 10px 24px;
+  border-radius: 40px;
+  border: none;
+  background: var(--purple);
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.waitlist-form button:hover {
+  background: var(--purple-d);
+}
+
+.confirm {
+  color: var(--purple);
+  font-size: 10px;
+  margin-bottom: 6px;
+}
+
+.waitlist-hint {
+  font-size: 8px;
+  color: var(--text-hint);
+}
+
+.carousel-section {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: fadeUp 0.7s ease 0.5s forwards;
+  opacity: 0;
+}
+
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  justify-content: center;
+}
+
+.carousel-btn {
+  background: rgba(168,85,247,0.1);
+  border: 0.5px solid rgba(168,85,247,0.3);
+  color: var(--purple);
+  font-size: 22px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover { background: rgba(168,85,247,0.25); }
+.carousel-btn:disabled { opacity: 0.2; cursor: default; }
+
+.slides-wrap {
+  overflow: hidden;
+  width: min(220px, 60vw);
+}
+
+.slides-inner {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.slide-card {
+  flex: 0 0 min(220px, 60vw);
+  background: rgba(13,8,32,0.8);
+  border: 0.5px solid rgba(168,85,247,0.2);
+  border-radius: 12px;
+  padding: 1rem 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 240px;
+  overflow: hidden;
+}
+
+.slide-tag {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-hint);
+}
+
+.slide-heading {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.slide-body {
+  font-size: 9px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.slide-visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eeg-wrap { width: 100%; display: flex; flex-direction: column; gap: 12px; }
+.eeg-row { display: flex; align-items: center; gap: 8px; }
+.eeg-band { font-size: 12px; color: var(--text-hint); width: 42px; text-align: right; font-family: monospace; }
+.eeg-muted { color: #6b5080 !important; }
+.eeg-bar-bg { flex: 1; height: 5px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden; }
+.eeg-bar { height: 100%; border-radius: 3px; }
+.eeg-val { font-size: 12px; color: var(--purple); width: 24px; }
+.eeg-divider { margin-top: 8px; padding-top: 8px; border-top: 0.5px solid rgba(168,85,247,0.1); }
+
+.ufo-wrap { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100px; position: relative; width: 100%; }
+.ufo-track { position: absolute; left: 50%; top: 0; bottom: 20px; width: 1px; border-left: 1px dashed rgba(168,85,247,0.2); transform: translateX(-50%); }
+.ufo { font-size: 28px; animation: ufoFloat 3s ease-in-out infinite; position: relative; }
+.ufo-label { font-size: 9px; color: var(--text-hint); margin-top: 6px; letter-spacing: 0.08em; }
+
+.carousel-dots { display: flex; gap: 6px; }
+.cdot { width: 6px; height: 6px; border-radius: 50%; background: rgba(168,85,247,0.2); cursor: pointer; transition: background 0.2s; }
+.cdot.active { background: var(--purple); }
+
+@keyframes ufoFloat { 0% { transform: translateY(0); } 50% { transform: translateY(-80px); } 100% { transform: translateY(0); } }
+@keyframes barGrow { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+@keyframes sway-anim { 0%,100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+@keyframes blink-anim { 0%,90%,100% { opacity:1; } 95% { opacity:0; } }
+@keyframes pop-anim { 0%,100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+@keyframes bookGlowAnim { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+@keyframes sparkleAnim { 0%,100% { opacity:0.3; } 50% { opacity:1; } }
+
+.sway { animation: sway-anim 4s ease-in-out infinite; transform-origin: 65px 50px; }
+.blink { animation: blink-anim 1.2s ease-in-out infinite; }
+.pop { animation: pop-anim 2s ease-in-out infinite; }
+.book-glow { animation: bookGlowAnim 2.5s ease-in-out infinite; }
+.sparkle { animation: sparkleAnim 1.8s ease-in-out infinite; }
+
+@media (min-width: 768px) {
+  .logo { width: 240px; }
+
+  .description { font-size: clamp(15px, 1.5vw, 18px); max-width: 460px; }
+
+  .carousel-section { margin-top: 48px; margin-bottom: 40px; }
+
+  .slides-wrap { width: min(460px, 70vw); }
+  .slide-card { flex: 0 0 min(460px, 70vw); min-height: 400px; padding: 2.25rem 2rem; }
+
+  .slide-heading { font-size: 22px; }
+  .slide-body { font-size: 16px; }
+
+  .eeg-wrap { gap: 18px; }
+  .eeg-band { font-size: 15px; width: 52px; }
+  .eeg-val { font-size: 15px; width: 28px; }
+  .eeg-bar-bg { height: 6px; }
+
+  .ufo { font-size: 52px; }
+  .ufo-wrap { height: 180px; }
+
+  .waitlist { margin-top: 40px; }
+  .waitlist h2 { font-size: clamp(15px, 1.8vw, 20px); margin-bottom: 24px; }
+  .waitlist-form button { font-size: 14px; padding: 10px 22px; }
+}
+
+footer {
+  flex-shrink: 0;
+  padding: 16px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-hint);
+  letter-spacing: 0.3px;
+}

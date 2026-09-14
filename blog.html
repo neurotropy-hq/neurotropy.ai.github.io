@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog – Neurotropy</title>
-  <link rel="stylesheet" href="style.css?v=36" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;1,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=39" />
   <style>
     .blog-hero {
       width: 100%;
@@ -56,7 +59,7 @@
     }
 
     .blog-body p {
-      font-size: 17px;
+      font-size: 21px;
       color: var(--text-muted);
       line-height: 1.85;
     }
@@ -113,7 +116,7 @@
 
     @media (max-width: 680px) {
       .blog-hero, .blog-body, .references { padding-left: 20px; padding-right: 20px; }
-      .blog-body p { font-size: 15px; }
+      .blog-body p { font-size: 19px; }
     }
   </style>
 </head>
@@ -121,11 +124,13 @@
 
   <!-- ── NAV ── -->
   <nav class="nav">
-    <a href="index.html"><img src="logo.svg" alt="Neurotropy" class="nav-logo" /></a>
+    <a href="index.html" onclick="return ntGo(event,'home',null)"><img src="logo.svg" alt="Neurotropy" class="nav-logo" /></a>
     <div class="nav-tabs">
-      <a href="index.html" class="nav-tab" data-en="Home" data-de="Start">Home</a>
-      <a href="blog.html" class="nav-tab active" data-en="Blog" data-de="Blog">Blog</a>
-      <a href="index.html#cta" class="nav-tab" data-en="Get in Touch" data-de="Kontakt">Get in Touch</a>
+      <a href="index.html" onclick="return ntGo(event,'home',null)" class="nav-tab" data-nt="home" data-en="Home" data-de="Start">Home</a>
+      <a href="index.html#vision" onclick="return ntGo(event,'home','vision')" class="nav-tab" data-nt="home" data-en="Our Vision" data-de="Unsere Vision">Our Vision</a>
+      <a href="index.html#team" onclick="return ntGo(event,'home','team')" class="nav-tab" data-nt="home" data-en="Team" data-de="Team">Team</a>
+      <a href="blog.html" onclick="return ntGo(event,'blog',null)" class="nav-tab active" data-nt="blog" data-en="Blog" data-de="Blog">Blog</a>
+      <a href="index.html#cta" onclick="return ntGo(event,'home','cta')" class="nav-tab" data-nt="home" data-en="Get in Touch" data-de="Kontakt">Get in Touch</a>
       <button class="nav-lang" id="lang-toggle" onclick="toggleLang()">DE</button>
     </div>
   </nav>
@@ -133,8 +138,8 @@
   <main style="align-items: center;">
 
     <div class="blog-hero">
-      <p class="blog-eyebrow">Blog</p>
-      <h1 class="blog-title">Vom Fahrradfahren zu Neurofeedback: Warum Lernen Feedback braucht</h1>
+      <p class="blog-eyebrow" data-en="Blog" data-de="Blog">Blog</p>
+      <h1 class="blog-title" data-en="From Riding a Bike to Neurofeedback: Why Learning Needs Feedback" data-de="Vom Fahrradfahren zu Neurofeedback: Warum Lernen Feedback braucht">From Riding a Bike to Neurofeedback: Why Learning Needs Feedback</h1>
       <p class="blog-meta">Henrik Röhr · 2026</p>
     </div>
 
@@ -142,23 +147,23 @@
 
     <div class="blog-body">
 
-      <p>Alles, was wir jemals gelernt haben, haben wir durch Feedback gelernt, also Informationen, die wir von unserem Körper und unserer Umgebung infolge unserer eigenen Handlungen erhalten haben. Als wir zum ersten Mal Fahrrad fuhren, haben wir uns das Knie aufgeschlagen, und der Schmerz war „negatives" Feedback. Nach einigen Versuchen hat es dann endlich geklappt, und die Euphorie des Fahrens war „positives" Feedback. Unser Nervensystem hat durch viel Ausprobieren gelernt, eine Vielzahl von Muskeln genau so anzusteuern, dass wir die Balance halten und geradeaus fahren. Als wir sprechen lernten, mussten wir eine Unmenge von kleinen Muskeln in unserer Zunge, Lippen, Lunge und Stimmbändern kontrollieren lernen, damit sie Laute produzieren, die andere Menschen verstehen. Auch hier haben wir Feedback erhalten, nämlich durch die Menschen um uns herum. Wurden wir verstanden – zum Beispiel, indem wir bekamen, was wir wollten –, erhielten wir positives Feedback. Unser Nervensystem hat gelernt: „mehr davon".</p>
+      <p data-en="Everything we have ever learned, we learned through feedback — information we received from our body and our environment as a result of our own actions. The first time we rode a bike, we scraped our knee, and the pain was &quot;negative&quot; feedback. After a few attempts, it finally worked, and the thrill of riding was &quot;positive&quot; feedback. Through a great deal of trial and error, our nervous system learned to control a whole range of muscles precisely enough to keep our balance and ride straight. When we learned to speak, we had to learn to control a huge number of small muscles in our tongue, lips, lungs, and vocal cords so they would produce sounds other people could understand. Here too, we received feedback — from the people around us. When we were understood — for example, by getting what we wanted — we received positive feedback. Our nervous system learned: &quot;more of that.&quot;" data-de="Alles, was wir jemals gelernt haben, haben wir durch Feedback gelernt, also Informationen, die wir von unserem Körper und unserer Umgebung infolge unserer eigenen Handlungen erhalten haben. Als wir zum ersten Mal Fahrrad fuhren, haben wir uns das Knie aufgeschlagen, und der Schmerz war „negatives&quot; Feedback. Nach einigen Versuchen hat es dann endlich geklappt, und die Euphorie des Fahrens war „positives&quot; Feedback. Unser Nervensystem hat durch viel Ausprobieren gelernt, eine Vielzahl von Muskeln genau so anzusteuern, dass wir die Balance halten und geradeaus fahren. Als wir sprechen lernten, mussten wir eine Unmenge von kleinen Muskeln in unserer Zunge, Lippen, Lunge und Stimmbändern kontrollieren lernen, damit sie Laute produzieren, die andere Menschen verstehen. Auch hier haben wir Feedback erhalten, nämlich durch die Menschen um uns herum. Wurden wir verstanden – zum Beispiel, indem wir bekamen, was wir wollten –, erhielten wir positives Feedback. Unser Nervensystem hat gelernt: „mehr davon&quot;.">Everything we have ever learned, we learned through feedback — information we received from our body and our environment as a result of our own actions. The first time we rode a bike, we scraped our knee, and the pain was "negative" feedback. After a few attempts, it finally worked, and the thrill of riding was "positive" feedback. Through a great deal of trial and error, our nervous system learned to control a whole range of muscles precisely enough to keep our balance and ride straight. When we learned to speak, we had to learn to control a huge number of small muscles in our tongue, lips, lungs, and vocal cords so they would produce sounds other people could understand. Here too, we received feedback — from the people around us. When we were understood — for example, by getting what we wanted — we received positive feedback. Our nervous system learned: "more of that."</p>
 
-      <p>Der biologische Prozess, der dieser Art von Lernen zugrunde liegt, nennt sich Neuroplastizität. Die Neuronen, die unser Nervensystem bilden, sind „plastisch", das heißt, sie sind formbar und verändern sich. Aus dieser Sicht bedeutet Lernen, dass unser Nervensystem ständig kleine Veränderungen vornimmt, wodurch wir beispielsweise die genaue Kombination von Muskelanspannung herausfinden, die notwendig ist, um Fahrrad zu fahren. Dieser Prozess funktioniert aber nur unter einer wichtigen Voraussetzung: Unser Nervensystem benötigt Feedback, um zu wissen, welche Art von Anpassungen erforderlich sind. Bleibt dieses Feedback aus, ist Lernen nicht möglich. Ein tragisches Beispiel dafür sind schwer vernachlässigte Kinder, die in ihren ersten Lebensjahren kaum sprachlichen Kontakt erfahren: Obwohl mit ihrem Sprachapparat und Gehör oft alles in Ordnung ist, lernen sie ohne die ständige sprachliche Rückmeldung ihrer Umgebung nicht, richtig zu sprechen.</p>
+      <p data-en="The biological process underlying this kind of learning is called neuroplasticity. The neurons that make up our nervous system are &quot;plastic&quot; — meaning they are malleable and change over time. Seen this way, learning means that our nervous system is constantly making small adjustments, which is how we work out, for example, the exact combination of muscle tension needed to ride a bike. But this process only works under one important condition: our nervous system needs feedback to know what kind of adjustments are required. Without that feedback, learning is not possible. A tragic example of this is severely neglected children who experience almost no linguistic contact in their first years of life: even though their speech apparatus and hearing are often perfectly intact, without the constant linguistic feedback of their environment they never learn to speak properly." data-de="Der biologische Prozess, der dieser Art von Lernen zugrunde liegt, nennt sich Neuroplastizität. Die Neuronen, die unser Nervensystem bilden, sind „plastisch&quot;, das heißt, sie sind formbar und verändern sich. Aus dieser Sicht bedeutet Lernen, dass unser Nervensystem ständig kleine Veränderungen vornimmt, wodurch wir beispielsweise die genaue Kombination von Muskelanspannung herausfinden, die notwendig ist, um Fahrrad zu fahren. Dieser Prozess funktioniert aber nur unter einer wichtigen Voraussetzung: Unser Nervensystem benötigt Feedback, um zu wissen, welche Art von Anpassungen erforderlich sind. Bleibt dieses Feedback aus, ist Lernen nicht möglich. Ein tragisches Beispiel dafür sind schwer vernachlässigte Kinder, die in ihren ersten Lebensjahren kaum sprachlichen Kontakt erfahren: Obwohl mit ihrem Sprachapparat und Gehör oft alles in Ordnung ist, lernen sie ohne die ständige sprachliche Rückmeldung ihrer Umgebung nicht, richtig zu sprechen.">The biological process underlying this kind of learning is called neuroplasticity. The neurons that make up our nervous system are "plastic" — meaning they are malleable and change over time. Seen this way, learning means that our nervous system is constantly making small adjustments, which is how we work out, for example, the exact combination of muscle tension needed to ride a bike. But this process only works under one important condition: our nervous system needs feedback to know what kind of adjustments are required. Without that feedback, learning is not possible. A tragic example of this is severely neglected children who experience almost no linguistic contact in their first years of life: even though their speech apparatus and hearing are often perfectly intact, without the constant linguistic feedback of their environment they never learn to speak properly.</p>
 
-      <p>Die Situation, kein Feedback zu erhalten und deshalb nicht lernen zu können, ist nicht nur auf vernachlässigte Kinder beschränkt. Zum Beispiel nehmen die meisten Menschen das Echo von Geräuschen in ihrer Umgebung normalerweise nicht bewusst wahr. Sie sind daher nicht in der Lage, Echoortung zu erlernen, wie beispielsweise Fledermäuse es tun. Hierzu bestehen jedoch Ausnahmen, denn einige blinde Menschen sind in der Lage, Klicklaute zu erzeugen, wodurch sie ihre Umgebung durch Echoortung wahrnehmen können. Sobald wir Feedback erhalten, können wir lernen, es uns zunutze zu machen.</p>
+      <p data-en="This situation — receiving no feedback and therefore being unable to learn — isn't limited to neglected children. For example, most people don't consciously perceive the echo of sounds in their environment. As a result, they're unable to learn echolocation the way bats do. There are exceptions, though: some blind people are able to produce clicking sounds that let them perceive their surroundings through echolocation. As soon as we receive feedback, we can learn to make use of it." data-de="Die Situation, kein Feedback zu erhalten und deshalb nicht lernen zu können, ist nicht nur auf vernachlässigte Kinder beschränkt. Zum Beispiel nehmen die meisten Menschen das Echo von Geräuschen in ihrer Umgebung normalerweise nicht bewusst wahr. Sie sind daher nicht in der Lage, Echoortung zu erlernen, wie beispielsweise Fledermäuse es tun. Hierzu bestehen jedoch Ausnahmen, denn einige blinde Menschen sind in der Lage, Klicklaute zu erzeugen, wodurch sie ihre Umgebung durch Echoortung wahrnehmen können. Sobald wir Feedback erhalten, können wir lernen, es uns zunutze zu machen.">This situation — receiving no feedback and therefore being unable to learn — isn't limited to neglected children. For example, most people don't consciously perceive the echo of sounds in their environment. As a result, they're unable to learn echolocation the way bats do. There are exceptions, though: some blind people are able to produce clicking sounds that let them perceive their surroundings through echolocation. As soon as we receive feedback, we can learn to make use of it.</p>
 
-      <p>Diese Erkenntnis bildet die Grundlage von Biofeedback. Die Idee ist Folgende: Wenn wir einen Prozess in unserem Körper wahrnehmen, können wir in vielen Fällen lernen, diesen zu regulieren. Zum Beispiel können die wenigsten Menschen willentlich ihre Herzratenvariabilität oder Hautleitfähigkeit beeinflussen, schlicht, weil das Gehirn normalerweise keinen bewussten „Messwert" über diese physiologischen Zustände bekommt. Gibt man Menschen aber ein Feedbacksignal (z.&nbsp;B. über einen Monitor oder einen Ton), lernen sie häufig schnell, diese Prozesse zu steuern.</p>
+      <p data-en="This insight is the basis of biofeedback. The idea is this: if we can perceive a process happening in our body, we can, in many cases, learn to regulate it. For instance, very few people can voluntarily influence their heart rate variability or skin conductance, simply because the brain normally has no conscious &quot;readout&quot; of these physiological states. But if you give people a feedback signal — for example via a monitor or a tone — they often learn quickly to control these processes." data-de="Diese Erkenntnis bildet die Grundlage von Biofeedback. Die Idee ist Folgende: Wenn wir einen Prozess in unserem Körper wahrnehmen, können wir in vielen Fällen lernen, diesen zu regulieren. Zum Beispiel können die wenigsten Menschen willentlich ihre Herzratenvariabilität oder Hautleitfähigkeit beeinflussen, schlicht, weil das Gehirn normalerweise keinen bewussten „Messwert&quot; über diese physiologischen Zustände bekommt. Gibt man Menschen aber ein Feedbacksignal (z.&nbsp;B. über einen Monitor oder einen Ton), lernen sie häufig schnell, diese Prozesse zu steuern.">This insight is the basis of biofeedback. The idea is this: if we can perceive a process happening in our body, we can, in many cases, learn to regulate it. For instance, very few people can voluntarily influence their heart rate variability or skin conductance, simply because the brain normally has no conscious "readout" of these physiological states. But if you give people a feedback signal — for example via a monitor or a tone — they often learn quickly to control these processes.</p>
 
-      <p>Eine besondere Art von Biofeedback ist Neurofeedback, denn hier bezieht sich das Feedback spezifisch auf Prozesse im Gehirn. Während wir normalerweise unsere Gehirnwellen nicht direkt wahrnehmen, können wir durch Feedback lernen, diese zu regulieren. Ein bekanntes Anwendungsfeld hierfür sind Aufmerksamkeitsstörungen wie ADHS, bei denen Neurofeedback zur Behandlung eingesetzt wird. Konzentrationsschwierigkeiten gehen häufig mit bestimmten Wellenmustern des Gehirns einher. Neurofeedback-Training zielt darauf ab, diese Muster zu verändern und so die Aufmerksamkeitsregulation zu unterstützen.</p>
+      <p data-en="Neurofeedback is a special type of biofeedback, where the feedback relates specifically to processes in the brain. While we normally don't perceive our brainwaves directly, feedback can teach us to regulate them. One well-known application is attention disorders like ADHD, where neurofeedback is used as a treatment. Difficulty concentrating is often associated with particular patterns of brainwave activity. Neurofeedback training aims to change these patterns and thereby support attention regulation." data-de="Eine besondere Art von Biofeedback ist Neurofeedback, denn hier bezieht sich das Feedback spezifisch auf Prozesse im Gehirn. Während wir normalerweise unsere Gehirnwellen nicht direkt wahrnehmen, können wir durch Feedback lernen, diese zu regulieren. Ein bekanntes Anwendungsfeld hierfür sind Aufmerksamkeitsstörungen wie ADHS, bei denen Neurofeedback zur Behandlung eingesetzt wird. Konzentrationsschwierigkeiten gehen häufig mit bestimmten Wellenmustern des Gehirns einher. Neurofeedback-Training zielt darauf ab, diese Muster zu verändern und so die Aufmerksamkeitsregulation zu unterstützen.">Neurofeedback is a special type of biofeedback, where the feedback relates specifically to processes in the brain. While we normally don't perceive our brainwaves directly, feedback can teach us to regulate them. One well-known application is attention disorders like ADHD, where neurofeedback is used as a treatment. Difficulty concentrating is often associated with particular patterns of brainwave activity. Neurofeedback training aims to change these patterns and thereby support attention regulation.</p>
 
-      <p>Bei Neurotropy nutzen wir dieses Prinzip, um eine unserer wichtigsten Fähigkeiten zu verbessern: Lernen. Die Hirnforschung hat eine Vielzahl von Gehirnmustern identifiziert, die mit verbesserter Lernfähigkeit zusammenhängen. Hierauf aufbauende Studien und Meta-Analysen konnten zeigen, dass diese Gehirnmuster durch Neurofeedback-Training reguliert werden können und das Arbeits- und episodische Gedächtnis verbessern*. Mit Neurotropy wollen wir diese Erkenntnisse aus dem Labor in den Alltag bringen: Durch ein komfortables EEG-Stirnband werden die Gehirnströme gemessen und die für Lernen relevanten Aspekte der Gehirnaktivität in ein Feedback-Signal umgewandelt. Dieses Feedback ermöglicht es Nutzerinnen und Nutzern, ihr Gehirn in einen Zustand zu regulieren, in dem Lernen besonders gut funktioniert und Informationen besser gespeichert werden.</p>
+      <p data-en="At Neurotropy, we use this principle to improve one of our most important abilities: learning. Brain research has identified a range of brain patterns associated with improved learning ability. Studies and meta-analyses building on this have shown that these brain patterns can be regulated through neurofeedback training, improving both working and episodic memory*. With Neurotropy, we want to bring these findings out of the lab and into everyday life: a comfortable EEG headband measures brain activity, and the aspects of that activity relevant to learning are converted into a feedback signal. This feedback allows users to guide their brain into a state in which learning works especially well and information is retained better." data-de="Bei Neurotropy nutzen wir dieses Prinzip, um eine unserer wichtigsten Fähigkeiten zu verbessern: Lernen. Die Hirnforschung hat eine Vielzahl von Gehirnmustern identifiziert, die mit verbesserter Lernfähigkeit zusammenhängen. Hierauf aufbauende Studien und Meta-Analysen konnten zeigen, dass diese Gehirnmuster durch Neurofeedback-Training reguliert werden können und das Arbeits- und episodische Gedächtnis verbessern*. Mit Neurotropy wollen wir diese Erkenntnisse aus dem Labor in den Alltag bringen: Durch ein komfortables EEG-Stirnband werden die Gehirnströme gemessen und die für Lernen relevanten Aspekte der Gehirnaktivität in ein Feedback-Signal umgewandelt. Dieses Feedback ermöglicht es Nutzerinnen und Nutzern, ihr Gehirn in einen Zustand zu regulieren, in dem Lernen besonders gut funktioniert und Informationen besser gespeichert werden.">At Neurotropy, we use this principle to improve one of our most important abilities: learning. Brain research has identified a range of brain patterns associated with improved learning ability. Studies and meta-analyses building on this have shown that these brain patterns can be regulated through neurofeedback training, improving both working and episodic memory*. With Neurotropy, we want to bring these findings out of the lab and into everyday life: a comfortable EEG headband measures brain activity, and the aspects of that activity relevant to learning are converted into a feedback signal. This feedback allows users to guide their brain into a state in which learning works especially well and information is retained better.</p>
 
 
     </div>
 
     <div class="references">
-      <h3>Referenzen</h3>
+      <h3 data-en="References" data-de="Referenzen">References</h3>
 
       <p class="ref">Enriquez-Geppert, S., Smit, D., Eschmann, K. C. J., Marcos-Martínez, D., Sanchez, R. H., Hsieh, S., Dehais, F., &amp; Huster, R. J. (2026). A mega-analysis of EEG-based frontal-midline theta neurofeedback reveals learning dynamics, individual variability, and response profiles. <em>NeuroImage, 329</em>, 121820. <a href="https://doi.org/10.1016/j.neuroimage.2026.121820" target="_blank" rel="noopener">https://doi.org/10.1016/j.neuroimage.2026.121820</a></p>
 
@@ -175,20 +180,169 @@
 
   </main>
 
-  <footer>© 2026 Neurotropy · <a href="impressum.html" style="color: inherit; text-decoration: none;">Impressum</a></footer>
+  <footer>© 2026 Neurotropy · <a href="/impressum" style="color: inherit; text-decoration: none;">Impressum</a></footer>
 
   <script>
+    if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+    window.scrollTo(0, 0);
+    window.addEventListener('load', function() { window.scrollTo(0, 0); });
+
     var currentLang = localStorage.getItem('lang') || 'en';
     function applyLang(lang) {
       currentLang = lang;
       localStorage.setItem('lang', lang);
       document.getElementById('lang-toggle').textContent = lang === 'en' ? 'DE' : 'EN';
+      document.documentElement.lang = lang;
       document.querySelectorAll('[data-en]').forEach(function(el) {
+        // Skip elements that contain child elements (like the disclaimer with a link) --
+        // relevant once Home content (with its waitlist form) is swapped into this page.
+        if (el.children.length > 0) return;
         el.textContent = lang === 'en' ? el.dataset.en : el.dataset.de;
       });
+
+      // Handle disclaimer separately (has child link) -- present when Home content is swapped in
+      var disc = document.querySelector('.form-disclaimer');
+      if (disc) {
+        var link = disc.querySelector('a');
+        disc.childNodes.forEach(function(n) { if (n.nodeType === 3) n.remove(); });
+        var txt = lang === 'en'
+          ? 'By subscribing you agree to receive the Neurotropy newsletter. Unsubscribe anytime. '
+          : 'Mit der Anmeldung stimmst du dem Erhalt des Neurotropy-Newsletters zu. Jederzeit abbestellbar. ';
+        disc.insertBefore(document.createTextNode(txt), link);
+        if (link) link.textContent = lang === 'en' ? 'Privacy policy' : 'Datenschutz';
+      }
+
+      // Placeholder -- present when Home content is swapped in
+      var emailInput = document.getElementById('email-input');
+      if (emailInput) {
+        emailInput.placeholder = lang === 'en' ? emailInput.dataset.placeholderEn : emailInput.dataset.placeholderDe;
+      }
     }
     function toggleLang() { applyLang(currentLang === 'en' ? 'de' : 'en'); }
     applyLang(currentLang);
+
+    // Nav tab active state follows whichever tab was clicked
+    document.querySelectorAll('.nav-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.nav-tab').forEach(function(t) { t.classList.remove('active'); });
+        tab.classList.add('active');
+      });
+    });
+
+    // In-page router: swaps <main> content between Blog and Home via fetch,
+    // instead of doing a real page navigation, so switching tabs never shows
+    // a page reload -- it just feels like a tab changing. Content is
+    // prefetched in the background so the swap is instant, and a short
+    // opacity crossfade smooths out the transition either way.
+    var ntBlogMain = null;
+    var ntBlogTitle = document.title;
+    var ntHomeCache = null; // { main, title }
+    var ntCurrentPage = 'blog';
+    var ntMainEl = document.querySelector('main');
+    ntMainEl.style.transition = 'opacity 0.16s ease';
+
+    function ntCaptureBlog() {
+      if (ntBlogMain === null) ntBlogMain = document.querySelector('main').innerHTML;
+    }
+
+    function ntSetActive(page) {
+      // Used only for popstate restoration (no originating click to mark) --
+      // highlights just the first tab for that page (Home, or Blog).
+      var marked = false;
+      document.querySelectorAll('.nav-tab').forEach(function(t) {
+        var isMatch = !marked && t.dataset.nt === page;
+        t.classList.toggle('active', isMatch);
+        if (isMatch) { marked = true; }
+      });
+    }
+
+    function ntScrollToId(id) {
+      function attempt() {
+        var el = document.getElementById(id);
+        if (el) { el.scrollIntoView(); }
+      }
+      [0, 60, 200, 450].forEach(function(delay) { setTimeout(attempt, delay); });
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function() { setTimeout(attempt, 30); });
+      }
+    }
+
+    function ntFadeOut(cb) {
+      ntMainEl.style.opacity = '0';
+      setTimeout(cb, 160);
+    }
+
+    function ntFadeIn() {
+      void ntMainEl.offsetWidth; // force reflow so the fade-in actually animates
+      ntMainEl.style.opacity = '1';
+    }
+
+    function ntShowBlogSelf(scrollTarget) {
+      if (ntCurrentPage === 'blog') {
+        if (scrollTarget) { ntScrollToId(scrollTarget); } else { window.scrollTo(0, 0); }
+        return;
+      }
+      ntCaptureBlog();
+      ntFadeOut(function() {
+        document.querySelector('main').innerHTML = ntBlogMain;
+        document.title = ntBlogTitle;
+        ntCurrentPage = 'blog';
+        applyLang(currentLang);
+        if (history.pushState) { history.pushState({ ntPage: 'blog' }, '', 'blog.html'); }
+        window.scrollTo(0, 0);
+        ntFadeIn();
+      });
+    }
+
+    function ntRenderHome(data, scrollTarget) {
+      document.querySelector('main').innerHTML = data.main;
+      document.title = data.title;
+      ntCurrentPage = 'home';
+      applyLang(currentLang);
+      if (history.pushState) { history.pushState({ ntPage: 'home' }, '', 'index.html'); }
+      if (scrollTarget) { ntScrollToId(scrollTarget); } else { window.scrollTo(0, 0); }
+    }
+
+    function ntFetchHome() {
+      // Returns a promise resolving once ntHomeCache is populated (no-op if already cached).
+      if (ntHomeCache) { return Promise.resolve(ntHomeCache); }
+      return fetch('index.html').then(function(r) { return r.text(); }).then(function(html) {
+        var doc = new DOMParser().parseFromString(html, 'text/html');
+        var mainEl = doc.querySelector('main');
+        ntHomeCache = { main: mainEl ? mainEl.innerHTML : html, title: doc.title || 'Neurotropy' };
+        return ntHomeCache;
+      });
+    }
+
+    function ntShowHome(scrollTarget) {
+      ntCaptureBlog();
+      ntFadeOut(function() {
+        ntFetchHome().then(function(data) {
+          ntRenderHome(data, scrollTarget);
+          ntFadeIn();
+        }).catch(function() { window.location.href = 'index.html' + (scrollTarget ? '#' + scrollTarget : ''); });
+      });
+    }
+
+    function ntGo(event, page, scrollTarget) {
+      if (event) { event.preventDefault(); }
+      if (page === 'blog') { ntShowBlogSelf(scrollTarget); } else { ntShowHome(scrollTarget); }
+      return false;
+    }
+
+    window.addEventListener('popstate', function(e) {
+      var page = (e.state && e.state.ntPage) || 'blog';
+      if (page === 'home') { ntShowHome(null); } else { ntShowBlogSelf(null); }
+      ntSetActive(page);
+    });
+
+    // Prefetch the Home content in the background once the page has settled,
+    // so the very first tab switch is just as instant as later ones.
+    if (window.requestIdleCallback) {
+      requestIdleCallback(function() { ntFetchHome().catch(function() {}); }, { timeout: 2500 });
+    } else {
+      setTimeout(function() { ntFetchHome().catch(function() {}); }, 1000);
+    }
   </script>
 
 </body>

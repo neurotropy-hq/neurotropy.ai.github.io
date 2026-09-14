@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neurotropy – Warm up your Brain</title>
-  <link rel="stylesheet" href="style.css?v=37" />
+  <meta name="description" content="Neurotropy ist eine KI-gestützte Neurofeedback-Software für Biotech-Enthusiasten: Sie misst deine Gehirnaktivität über ein EEG-Headband und hilft dir mit spielerischem Feedback, dich selbst in den optimalen Lernzustand zu bringen." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;1,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=39" />
 
   <!-- MailerLite Universal -->
   <script>
@@ -20,11 +24,13 @@
 
   <!-- ── NAV ── -->
   <nav class="nav">
-    <a href="index.html"><img src="logo.svg" alt="Neurotropy" class="nav-logo" /></a>
+    <a href="index.html" onclick="return ntGo(event,'home',null)"><img src="logo.svg" alt="Neurotropy" class="nav-logo" /></a>
     <div class="nav-tabs">
-      <a href="index.html" class="nav-tab active" data-en="Home" data-de="Start">Home</a>
-      <a href="blog.html" class="nav-tab" data-en="Blog" data-de="Blog">Blog</a>
-      <a href="#cta" class="nav-tab" data-en="Get in Touch" data-de="Kontakt">Get in Touch</a>
+      <a href="index.html" onclick="return ntGo(event,'home',null)" class="nav-tab active" data-nt="home" data-en="Home" data-de="Start">Home</a>
+      <a href="#vision" onclick="return ntGo(event,'home','vision')" class="nav-tab" data-nt="home" data-en="Our Vision" data-de="Unsere Vision">Our Vision</a>
+      <a href="#team" onclick="return ntGo(event,'home','team')" class="nav-tab" data-nt="home" data-en="Team" data-de="Team">Team</a>
+      <a href="blog.html" onclick="return ntGo(event,'blog',null)" class="nav-tab" data-nt="blog" data-en="Blog" data-de="Blog">Blog</a>
+      <a href="#cta" onclick="return ntGo(event,'home','cta')" class="nav-tab" data-nt="home" data-en="Get in Touch" data-de="Kontakt">Get in Touch</a>
       <button class="nav-lang" id="lang-toggle" onclick="toggleLang()">DE</button>
     </div>
   </nav>
@@ -34,22 +40,105 @@
     <!-- ── HERO ── -->
     <section class="hero">
       <div class="hero-text">
-        <h1 class="headline" data-en="Warm up your brain before you study" data-de="Wärme dein Gehirn auf, bevor du lernst">Warm up your brain before you study</h1>
+        <p class="label" data-en="AI Neurofeedback" data-de="KI-Neurofeedback">AI Neurofeedback</p>
+        <h1 class="headline" data-en="Train your brain into its best learning state" data-de="Bring dein Gehirn in seinen besten Lernzustand">Train your brain into its best learning state</h1>
+        <p class="hero-sub" data-en="Neurotropy is an AI-powered neurofeedback software connected to an EEG headband. We give you real-time feedback on your brain activity. Use playful exercises to bring yourself into your ideal learning state before you begin." data-de="Neurotropy ist eine KI-gestützte Neurofeedback-Software, die mit einem EEG-Headband verknüpft ist. Wir geben dir Echtzeitfeedback zu deiner Gehirnaktivität. Bringe dich selbst mit spielerischen Übungen in einen idealen Lernzustand, bevor du beginnst.">Neurotropy is an AI-powered neurofeedback software connected to an EEG headband. We give you real-time feedback on your brain activity. Use playful exercises to bring yourself into your ideal learning state before you begin.</p>
         <ul class="value-props">
-          <li data-en="Prepare your brain for learning with EEG neurofeedback" data-de="Bereite dein Gehirn mit EEG-Neurofeedback auf das Lernen vor">Prepare your brain for learning with EEG neurofeedback</li>
-          <li data-en="Guides you into study-mode before you open your books" data-de="Bringt dich in den Lernmodus, bevor du die Bücher aufschlägst">Guides you into study-mode before you open your books</li>
-          <li data-en="Start every study session at your best" data-de="Starte jede Lernsession in Bestform">Start every study session at your best</li>
+          <li>
+            <svg class="value-icon" viewBox="50 0 60 80" aria-hidden="true"><path d="M80 6C66 6 55 17 55 30.5c0 7.5 3.5 14 9 18v6.5h32v-6.5c5.5-4 9-10.5 9-18C105 17 94 6 80 6z" fill="var(--bg)" stroke="var(--accent-d)" stroke-width="2.4" stroke-linejoin="round"/><rect x="63" y="60.5" width="34" height="4.5" rx="2" fill="var(--accent-d)"/><rect x="65.5" y="66" width="29" height="4.5" rx="2" fill="var(--accent-d)" opacity="0.6"/><rect x="68.5" y="71.5" width="23" height="4.5" rx="2" fill="var(--accent-d)" opacity="0.3"/><polyline points="55,30.5 61,30.5 64,22 67.5,39 71,27.5 74,33 77,25 80,31 83,23.5 86.5,37 90,30.5 96,30.5 105,30.5" stroke="var(--accent-d)" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-en="Real-time neurofeedback via a comfortable EEG headband" data-de="Echtzeit-Neurofeedback über ein komfortables EEG-Headband">Real-time neurofeedback via a comfortable EEG headband</span>
+          </li>
+          <li>
+            <svg class="value-icon" viewBox="50 0 60 80" aria-hidden="true"><path d="M80 6C66 6 55 17 55 30.5c0 7.5 3.5 14 9 18v6.5h32v-6.5c5.5-4 9-10.5 9-18C105 17 94 6 80 6z" fill="var(--bg)" stroke="var(--accent-d)" stroke-width="2.4" stroke-linejoin="round"/><rect x="63" y="60.5" width="34" height="4.5" rx="2" fill="var(--accent-d)"/><rect x="65.5" y="66" width="29" height="4.5" rx="2" fill="var(--accent-d)" opacity="0.6"/><rect x="68.5" y="71.5" width="23" height="4.5" rx="2" fill="var(--accent-d)" opacity="0.3"/><polyline points="55,30.5 61,30.5 64,22 67.5,39 71,27.5 74,33 77,25 80,31 83,23.5 86.5,37 90,30.5 96,30.5 105,30.5" stroke="var(--accent-d)" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-en="Playful, AI-personalized exercises — like guiding your own moving orb" data-de="Spielerische, KI-personalisierte Übungen, z. B. dein eigenes bewegliches UFO steuern">Playful, AI-personalized exercises — like guiding your own moving orb</span>
+          </li>
+          <li>
+            <svg class="value-icon" viewBox="50 0 60 80" aria-hidden="true"><path d="M80 6C66 6 55 17 55 30.5c0 7.5 3.5 14 9 18v6.5h32v-6.5c5.5-4 9-10.5 9-18C105 17 94 6 80 6z" fill="var(--bg)" stroke="var(--accent-d)" stroke-width="2.4" stroke-linejoin="round"/><rect x="63" y="60.5" width="34" height="4.5" rx="2" fill="var(--accent-d)"/><rect x="65.5" y="66" width="29" height="4.5" rx="2" fill="var(--accent-d)" opacity="0.6"/><rect x="68.5" y="71.5" width="23" height="4.5" rx="2" fill="var(--accent-d)" opacity="0.3"/><polyline points="55,30.5 61,30.5 64,22 67.5,39 71,27.5 74,33 77,25 80,31 83,23.5 86.5,37 90,30.5 96,30.5 105,30.5" stroke="var(--accent-d)" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-en="Learn to shift your brain into its ideal study mode" data-de="Lerne, dein Gehirn in den idealen Lernmodus zu bringen.">Learn to shift your brain into its ideal study mode</span>
+          </li>
         </ul>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <svg viewBox="0 0 380 460" xmlns="http://www.w3.org/2000/svg">
+          <!-- soft background blob -->
+          <path d="M60,90 C120,30 260,30 320,100 C375,160 360,270 330,340 C295,420 200,450 120,420 C40,390 10,300 20,220 C28,160 20,140 60,90 Z" fill="var(--frame-outer)" opacity="0.94"/>
+          <!-- shoulders / torso -->
+          <path d="M90,340 C90,300 140,280 190,280 C240,280 290,300 290,340 L300,430 L80,430 Z" fill="var(--frame-neck)"/>
+          <!-- head -->
+          <circle cx="190" cy="195" r="98" fill="var(--frame-face)" stroke="var(--text)" stroke-opacity="0.10" stroke-width="2"/>
+          <!-- headband (EEG signal accent) -->
+          <path d="M96,158 C130,128 250,128 284,158" fill="none" stroke="var(--vivid)" stroke-width="16" stroke-linecap="round"/>
+          <circle class="headband-dot" style="animation-delay:0s" cx="120" cy="145" r="6" fill="var(--vivid-dark)"/>
+          <circle class="headband-dot" style="animation-delay:0.4s" cx="190" cy="131" r="6" fill="var(--vivid-dark)"/>
+          <circle class="headband-dot" style="animation-delay:0.8s" cx="260" cy="145" r="6" fill="var(--vivid-dark)"/>
+          <!-- feedback signal line to UFO -->
+          <path d="M260,145 C300,120 300,95 300,80" fill="none" stroke="var(--vivid)" stroke-width="1.5" stroke-dasharray="2 7" opacity="0.7"/>
+          <!-- UFO motion trail -->
+          <path d="M210,95 C240,88 265,82 292,74" fill="none" stroke="var(--vivid)" stroke-width="1.5" stroke-dasharray="2 7" opacity="0.5"/>
+          <!-- UFO (reward / target-reached accent) -->
+          <g class="ufo-group">
+            <ellipse cx="312" cy="70" rx="15" ry="13" fill="var(--calm-bright)"/>
+            <ellipse cx="312" cy="80" rx="38" ry="13" fill="var(--calm)"/>
+            <ellipse cx="298" cy="93" rx="5" ry="4" fill="var(--calm-dark)" opacity="0.7"/>
+            <ellipse cx="312" cy="96" rx="5" ry="4" fill="var(--calm-dark)" opacity="0.7"/>
+            <ellipse cx="326" cy="93" rx="5" ry="4" fill="var(--calm-dark)" opacity="0.7"/>
+          </g>
+        </svg>
       </div>
     </section>
 
     <!-- ── OUR VISION ── -->
-    <section class="section vision-section">
+    <section class="section vision-section" id="vision">
       <p class="section-label" data-en="Our Vision" data-de="Unsere Vision">Our Vision</p>
-      <h2 class="section-headline" data-en="The brain is the missing variable in learning" data-de="Das Gehirn ist die fehlende Variable beim Lernen">The brain is the missing variable in learning</h2>
+      <h2 class="section-headline" data-en="Your own brain is the missing variable in learning" data-de="Das eigene Gehirn ist die fehlende Variable beim Lernen">Your own brain is the missing variable in learning</h2>
       <div class="vision-body">
-        <p data-en="We've all sat down to study and stared at the page. Not because the material was too hard, but because our brain simply wasn't ready yet. That can be pretty frustrating. So we started asking why." data-de="Wir alle haben uns schon zum Lernen hingesetzt und auf die Seite gestarrt. Nicht weil der Stoff zu schwer war, sondern weil das Gehirn einfach noch nicht bereit war. Das kann ziemlich frustrierend sein. Also haben wir begonnen zu fragen: Warum?">We've all sat down to study and stared at the page. Not because the material was too hard, but because our brain simply wasn't ready yet. That can be pretty frustrating. So we started asking why.</p>
-        <p data-en="It turns out your capacity to learn depends on the state of your brain. Some brain states support learning, others don't. And with the right feedback, you can learn to shift into the right one. Neurotropy gets you there." data-de="Es stellt sich heraus: Die Fähigkeit zu lernen hängt vom Zustand deines Gehirns ab. Manche Gehirnzustände fördern das Lernen, andere nicht. Mit dem richtigen Feedback kannst du lernen, in den richtigen Zustand zu wechseln. Neurotropy bringt dich dorthin.">It turns out your capacity to learn depends on the state of your brain. Some brain states support learning, others don't. And with the right feedback, you can learn to shift into the right one. Neurotropy gets you there.</p>
+        <p data-en="We've all sat down to study and stared at the page. Not because the material was too hard, but because our brain simply wasn't ready yet. That can be pretty frustrating." data-de="Wir alle haben uns schon zum Lernen hingesetzt und auf die Seite gestarrt. Nicht weil der Stoff zu schwer war, sondern weil unser Gehirn einfach noch nicht bereit war. Das kann ziemlich frustrierend sein.">We've all sat down to study and stared at the page. Not because the material was too hard, but because our brain simply wasn't ready yet. That can be pretty frustrating.</p>
+        <p data-en="It turns out your capacity to learn depends on the state of your brain. Some brain states support learning, others don't. With real-time neurofeedback and AI personalized to your own brain, you can learn to shift into the right one yourself — session after session." data-de="Es stellt sich heraus: Die Fähigkeit zu lernen hängt vom Zustand deines Gehirns ab. Manche Gehirnzustände fördern das Lernen, andere nicht. Mit Echtzeit-Neurofeedback und KI, die sich an dein eigenes Gehirn anpasst, kannst du lernen, selbst in den richtigen Zustand zu wechseln. Sitzung für Sitzung.">It turns out your capacity to learn depends on the state of your brain. Some brain states support learning, others don't. With real-time neurofeedback and AI personalized to your own brain, you can learn to shift into the right one yourself — session after session.</p>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ── -->
+    <section class="section how-section">
+      <p class="section-label" data-en="How it works" data-de="So funktioniert's">How it works</p>
+      <h2 class="section-headline" data-en="You're in control" data-de="DU hast die Kontrolle">You're in control</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">
+            <svg width="66" height="66" viewBox="0 0 52 52" fill="none">
+              <circle cx="26" cy="24" r="17" fill="var(--bg-raised)"/>
+              <path d="M11,20 C16,13 36,13 41,20" fill="none" stroke="var(--vivid)" stroke-width="4.5" stroke-linecap="round"/>
+              <circle cx="17" cy="17.5" r="2" fill="var(--vivid-dark)"/>
+              <circle cx="26" cy="14" r="2" fill="var(--vivid-dark)"/>
+              <circle cx="35" cy="17.5" r="2" fill="var(--vivid-dark)"/>
+            </svg>
+          </div>
+          <h3 data-en="Put on the headband" data-de="Headband aufsetzen">Put on the headband</h3>
+          <p data-en="The EEG headband picks up your brain activity in real time." data-de="Das EEG-Headband erfasst in Echtzeit deine Gehirnaktivität.">The EEG headband picks up your brain activity in real time.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-icon">
+            <svg width="66" height="66" viewBox="0 0 52 52" fill="none">
+              <polyline points="6,30 14,30 18,18 24,38 29,22 33,30 40,30 46,30" fill="none" stroke="var(--vivid)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 data-en="Get live feedback" data-de="Live-Feedback erhalten">Get live feedback</h3>
+          <p data-en="Our AI turns your brain activity into a simple visual signal, so you always know where you stand without us ever influencing your brain." data-de="Unsere KI übersetzt deine Gehirnaktivität in ein einfaches visuelles Signal, damit du jederzeit weißt, wo du stehst. Dabei wirken wir nie direkt auf dein Gehirn ein.">Our AI turns your brain activity into a simple visual signal, so you always know where you stand without us ever influencing your brain.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-icon">
+            <svg width="66" height="66" viewBox="0 0 52 52" fill="none">
+              <ellipse cx="26" cy="19" rx="9" ry="8" fill="var(--calm-bright)"/>
+              <ellipse cx="26" cy="27" rx="22" ry="8" fill="var(--calm)"/>
+              <ellipse cx="16" cy="34" rx="3" ry="2.5" fill="var(--calm-dark)" opacity="0.7"/>
+              <ellipse cx="26" cy="36" rx="3" ry="2.5" fill="var(--calm-dark)" opacity="0.7"/>
+              <ellipse cx="36" cy="34" rx="3" ry="2.5" fill="var(--calm-dark)" opacity="0.7"/>
+            </svg>
+          </div>
+          <h3 data-en="Guide the UFO yourself" data-de="Steuere das UFO selbst">Guide the UFO yourself</h3>
+          <p data-en="In a gamified exercise, a small UFO drifts across the screen. By focusing on your brain state, you learn to guide it." data-de="In einer leichten spielerischen Übung schwebt ein kleines UFO über den Bildschirm. Indem du dich auf deinen Gehirnzustand konzentrierst, lernst du, es zu lenken.">In a gamified exercise, a small UFO drifts across the screen. By focusing on your brain state, you learn to guide it.</p>
+        </div>
       </div>
     </section>
 
@@ -89,8 +178,8 @@
 
     <!-- ── FINAL CTA ── -->
     <section class="section cta-section" id="cta">
-      <p class="section-label" data-en="Early access" data-de="Früher Zugang">Early access</p>
-      <h2 class="section-headline" data-en="Ready for your first brain workout?" data-de="Bereit für dein erstes Gehirntraining?">Ready for your first brain workout?</h2>
+      <p class="section-label" data-en="Early access" data-de="Early Access">Early access</p>
+      <h2 class="section-headline" data-en="Ready for your first brain workout?" data-de="Bereit für dein erstes Brain-Workout?">Ready for your first brain workout?</h2>
       <p class="cta-sub" data-en="Neurotropy is in development. Join the waitlist and be one of the first to use it." data-de="Neurotropy ist in Entwicklung. Trag dich auf die Warteliste ein und sei einer der Ersten, die es nutzen.">Neurotropy is in development. Join the waitlist and be one of the first to use it.</p>
       <form class="waitlist-form waitlist-form-lg"
             action="https://assets.mailerlite.com/jsonp/2529173/forms/194791117559957238/subscribe"
@@ -158,6 +247,140 @@
       applyLang(currentLang === 'en' ? 'de' : 'en');
     }
     applyLang(currentLang);
+
+    // Nav tab active state follows whichever tab was clicked
+    document.querySelectorAll('.nav-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.nav-tab').forEach(function(t) { t.classList.remove('active'); });
+        tab.classList.add('active');
+      });
+    });
+
+    // In-page router: swaps <main> content between Home and Blog via fetch,
+    // instead of doing a real page navigation, so switching tabs never shows
+    // a page reload -- it just feels like a tab changing. Content is
+    // prefetched in the background so the swap is instant, and a short
+    // opacity crossfade smooths out the transition either way.
+    var ntHomeMain = null;
+    var ntHomeTitle = document.title;
+    var ntBlogCache = null; // { main, title, styleHTML }
+    var ntCurrentPage = 'home';
+    var ntMainEl = document.querySelector('main');
+    ntMainEl.style.transition = 'opacity 0.16s ease';
+
+    function ntCaptureHome() {
+      if (ntHomeMain === null) ntHomeMain = document.querySelector('main').innerHTML;
+    }
+
+    function ntSetActive(page) {
+      // Used only for popstate restoration (no originating click to mark) --
+      // highlights just the first tab for that page (Home, or Blog).
+      var marked = false;
+      document.querySelectorAll('.nav-tab').forEach(function(t) {
+        var isMatch = !marked && t.dataset.nt === page;
+        t.classList.toggle('active', isMatch);
+        if (isMatch) { marked = true; }
+      });
+    }
+
+    function ntScrollToId(id) {
+      function attempt() {
+        var el = document.getElementById(id);
+        if (el) { el.scrollIntoView(); }
+      }
+      [0, 60, 200, 450].forEach(function(delay) { setTimeout(attempt, delay); });
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function() { setTimeout(attempt, 30); });
+      }
+    }
+
+    function ntFadeOut(cb) {
+      ntMainEl.style.opacity = '0';
+      setTimeout(cb, 160);
+    }
+
+    function ntFadeIn() {
+      void ntMainEl.offsetWidth; // force reflow so the fade-in actually animates
+      ntMainEl.style.opacity = '1';
+    }
+
+    function ntShowHome(scrollTarget) {
+      if (ntCurrentPage === 'home') {
+        if (scrollTarget) { ntScrollToId(scrollTarget); } else { window.scrollTo(0, 0); }
+        return;
+      }
+      ntCaptureHome();
+      ntFadeOut(function() {
+        document.querySelector('main').innerHTML = ntHomeMain;
+        document.title = ntHomeTitle;
+        ntCurrentPage = 'home';
+        applyLang(currentLang);
+        if (history.pushState) { history.pushState({ ntPage: 'home' }, '', 'index.html'); }
+        if (scrollTarget) { ntScrollToId(scrollTarget); } else { window.scrollTo(0, 0); }
+        ntFadeIn();
+      });
+    }
+
+    function ntRenderBlog(data) {
+      if (!document.getElementById('nt-blog-style') && data.styleHTML) {
+        var styleEl = document.createElement('style');
+        styleEl.id = 'nt-blog-style';
+        styleEl.textContent = data.styleHTML;
+        document.head.appendChild(styleEl);
+      }
+      document.querySelector('main').innerHTML = data.main;
+      document.title = data.title;
+      ntCurrentPage = 'blog';
+      applyLang(currentLang);
+      if (history.pushState) { history.pushState({ ntPage: 'blog' }, '', 'blog.html'); }
+      window.scrollTo(0, 0);
+    }
+
+    function ntFetchBlog() {
+      // Returns a promise resolving once ntBlogCache is populated (no-op if already cached).
+      if (ntBlogCache) { return Promise.resolve(ntBlogCache); }
+      return fetch('blog.html').then(function(r) { return r.text(); }).then(function(html) {
+        var doc = new DOMParser().parseFromString(html, 'text/html');
+        var mainEl = doc.querySelector('main');
+        var styleEl = doc.querySelector('style');
+        ntBlogCache = {
+          main: mainEl ? mainEl.innerHTML : html,
+          title: doc.title || 'Blog – Neurotropy',
+          styleHTML: styleEl ? styleEl.textContent : ''
+        };
+        return ntBlogCache;
+      });
+    }
+
+    function ntShowBlog() {
+      ntCaptureHome();
+      ntFadeOut(function() {
+        ntFetchBlog().then(function(data) {
+          ntRenderBlog(data);
+          ntFadeIn();
+        }).catch(function() { window.location.href = 'blog.html'; });
+      });
+    }
+
+    function ntGo(event, page, scrollTarget) {
+      if (event) { event.preventDefault(); }
+      if (page === 'blog') { ntShowBlog(); } else { ntShowHome(scrollTarget); }
+      return false;
+    }
+
+    window.addEventListener('popstate', function(e) {
+      var page = (e.state && e.state.ntPage) || 'home';
+      if (page === 'blog') { ntShowBlog(); } else { ntShowHome(null); }
+      ntSetActive(page);
+    });
+
+    // Prefetch the Blog content in the background once the page has settled,
+    // so the very first tab switch is just as instant as later ones.
+    if (window.requestIdleCallback) {
+      requestIdleCallback(function() { ntFetchBlog().catch(function() {}); }, { timeout: 2500 });
+    } else {
+      setTimeout(function() { ntFetchBlog().catch(function() {}); }, 1000);
+    }
   </script>
 
 </body>
