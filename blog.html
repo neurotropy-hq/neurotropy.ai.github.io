@@ -259,7 +259,12 @@
         var el = document.getElementById(id);
         if (el) { el.scrollIntoView(); }
       }
-      [0, 60, 200, 450].forEach(function(delay) { setTimeout(attempt, delay); });
+      // Run once immediately (synchronously, before the browser can paint the
+      // just-swapped content at the old scroll position) so there is no visible
+      // flash of the wrong section; the delayed retries just correct the
+      // position once fonts/images have finished affecting layout.
+      attempt();
+      [60, 200, 450].forEach(function(delay) { setTimeout(attempt, delay); });
       if (document.fonts && document.fonts.ready) {
         document.fonts.ready.then(function() { setTimeout(attempt, 30); });
       }
