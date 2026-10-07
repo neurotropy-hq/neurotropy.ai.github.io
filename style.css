@@ -16,7 +16,7 @@
   --purple:        var(--accent-bright);
 
   --nav-bg:          #2E3B24;
-  --nav-bar-bg:      rgba(244,238,227,0.88);
+  --nav-bar-bg:      #F4EEE3;
   --nav-text:        rgba(231,235,221,0.85);
   --nav-text-strong: #F5F7ED;
   --nav-active:      #C1592E;
@@ -63,8 +63,6 @@ h1, h2, h3, .headline, .section-headline, .team-name, .blog-title {
   right: 0;
   z-index: 100;
   background: var(--nav-bar-bg);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
