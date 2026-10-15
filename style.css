@@ -637,7 +637,6 @@ footer {
   text-align: center;
   font-size: 14px;
   color: var(--text-hint);
-  border-top: 1px solid var(--line);
   }
 
 /* ── Mobile ── */
@@ -699,7 +698,6 @@ footer {
 .legal-body a:hover { color: var(--text); }
 .legal-divider {
   border: none;
-  border-top: 1px solid var(--line);
   margin: 56px 0;
 }
 
